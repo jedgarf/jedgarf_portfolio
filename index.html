@@ -962,7 +962,7 @@
             
             evt.preventDefault();
             // console.log(form.serializeArray()[2].value);
-            // alert("NOT AVAILABLE RIGHT NOW.");
+            alert("NOT AVAILABLE RIGHT NOW.");
             console.log("test: ");
             // console.log(process.env.env_variable);
 
@@ -973,21 +973,21 @@
 
             // system email
             var sender_email = "info.jedgarfdev@gmail.com";
-            var email_password = "jedgarfsoftdev2022";
+            var email_password = "";
 
             var email_to = "jedgarf.dev12@gmail.com";
 
-            Email.send({
-                Host: "smtp.gmail.com",
-                Username : sender_email,
-                Password : email_password,
-                To : email_to,
-                From : sender_email,
-                Subject : subject,
-                Body : message,
-            }).then(
-                message => alert("mail sent successfully")
-            );
+            // Email.send({
+            //     Host: "smtp.gmail.com",
+            //     Username : sender_email,
+            //     Password : email_password,
+            //     To : email_to,
+            //     From : sender_email,
+            //     Subject : subject,
+            //     Body : message,
+            // }).then(
+            //     message => alert("mail sent successfully")
+            // );
 
         }
     </script>
