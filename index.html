@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Personal Portfolio</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/templatemo-style.css">
+
+    <style>
+        .tabset>input[type="radio"] {
+            position: absolute;
+            left: -200vw;
+        }
+        
+        .tabset .tab-panel {
+            display: none;
+        }
+        
+        .tabset>input:first-child:checked~.tab-panels>.tab-panel:first-child,
+        .tabset>input:nth-child(3):checked~.tab-panels>.tab-panel:nth-child(2),
+        .tabset>input:nth-child(5):checked~.tab-panels>.tab-panel:nth-child(3),
+        .tabset>input:nth-child(7):checked~.tab-panels>.tab-panel:nth-child(4),
+        .tabset>input:nth-child(9):checked~.tab-panels>.tab-panel:nth-child(5),
+        .tabset>input:nth-child(11):checked~.tab-panels>.tab-panel:nth-child(6) {
+            display: block;
+        }
+        /*
+          Styling
+          */
+        
+        .tabset>label {
+            position: relative;
+            display: inline-block;
+            padding: 15px 15px 25px;
+            border: 1px solid transparent;
+            border-bottom: 0;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        .tabset>label::after {
+            content: "";
+            position: absolute;
+            left: 15px;
+            bottom: 10px;
+            width: 22px;
+            height: 4px;
+            background: #8d8d8d;
+        }
+        
+        .tabset>label:hover,
+        .tabset>input:focus+label {
+            color: #06c;
+        }
+        
+        .tabset>label:hover::after,
+        .tabset>input:focus+label::after,
+        .tabset>input:checked+label::after {
+            background: #06c;
+        }
+        
+        .tabset>input:checked+label {
+            border-color: #ccc;
+            border-bottom: 1px solid #fff;
+            margin-bottom: -1px;
+        }
+        
+        .tab-panel {
+            padding: 30px 0;
+            border-top: 1px solid #ccc;
+        }
+        /*
+          Demo purposes only
+          */
+        
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+        
+        .tabset {
+            max-width: 100%;
+        }
+        
+        @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+        /* * {
+            box-sizing: border-box;
+        } */
+        /* body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-color: #f7f8fc;
+            font-family: "Roboto", sans-serif;
+            color: #10182f;
+        } */
+        
+        .bcontainer {
+            display: flex;
+            width: 1040px;
+            /* justify-content: space-evenly; */
+            flex-wrap: wrap;
+        }
+        
+        .bcard {
+            margin: 10px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            width: 300px;
+        }
+        
+        .bcard-header img {
+            width: 100%;
+            height: 200px;
+            /*object-fit: cover;*/
+        }
+        
+        .bcard-body {
+            display: flex;
+            flex-direction: column;
+            /* justify-content: center; */
+            align-items: flex-start;
+            padding: 20px;
+            min-height: 150px;
+        }
+        
+        .btag {
+            background: #cccccc;
+            border-radius: 50px;
+            font-size: 12px;
+            margin: 0;
+            color: #fff;
+            padding: 2px 10px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        
+        .btag-teal {
+            background-color: #47bcd4;
+        }
+        
+        .btag-purple {
+            background-color: #5e76bf;
+        }
+        
+        .btag-pink {
+            background-color: #cd5b9f;
+        }
+        
+        .bcard-body p {
+            font-size: 13px;
+            margin: 0 0 40px;
+        }
+        
+        .buser {
+            display: flex;
+            margin-top: auto;
+        }
+        
+        .buser img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .buser-info h5 {
+            margin: 0;
+        }
+        
+        .buser-info small {
+            color: #545d7a;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PRE LOADER -->
+    <section class="preloader">
+        <div class="spinner">
+            <span class="spinner-rotate"></span>
+        </div>
+    </section>
+
+
+    <!-- MENU -->
+    <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                <!-- lOGO TEXT HERE -->
+                <!-- <a href="index.html" class="navbar-brand">Jedgarf</a> -->
+            </div>
+
+            <!-- MENU LINKS -->
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-nav-first">
+                    <li><a href="#home" class="smoothScroll">Home</a></li>
+                    <li><a href="#about" class="smoothScroll">About</a></li>
+                    <li><a href="#skills" class="smoothScroll">Skills</a></li>
+                    <li><a href="#work_experiences" class="smoothScroll">Work Experiences</a></li>
+                    <li><a href="#projects" class="smoothScroll">Projects</a></li>
+                    <li><a href="#education" class="smoothScroll">Education</a></li>
+                    <li><a href="#certificates_seminars" class="smoothScroll">Certificates and Seminars</a></li>
+                    <li><a href="#contact" class="smoothScroll">Contacts</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="https://facebook.com/jedgarf" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+                    <!-- <li><a href="#"><i class="fa fa-instagram"></i></a></li> -->
+                    <li><a href="https://www.linkedin.com/in/jedgarf" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
+                    <li><a href="https://github.com/jedgarf" target="_blank"><i class="fa fa-github-square"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- HOME -->
+    <section id="home" data-stellar-background-ratio="0.5">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-sm-12">
+                    <div class="home-info">
+                        <h1>I'm <b class="typed-element"></b></h1>
+                        <a href="#projects" class="btn section-btn smoothScroll"><i class="fa fa-code"></i> Projects</a>
+                        <a href="#contact" class="btn section-btn smoothScroll"><i class="fa fa-envelope"></i> Get In Touch</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+                    <div class="home-video" hidden>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe src="https://www.youtube.com/embed/AqcjdkPMPJA" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-8 col-sm-12">
+                    <div class="about-info">
+                        <div class="section-title">
+                            <h2>About Me</h2>
+                            <span class="line-bar">...</span>
+                        </div>
+                        <p style="text-align: justify;">I have 3 years+ of experience as PHP Programmer/Developer in analysis, design, development, and management of web on windows based software application using Javascript/MySQL/Ajax/JQuery, HTML, API (PHP based Environment).</p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6" hidden>
+                    <div class="about-info skill-thumb">
+
+                        <strong>Frontend Developent</strong>
+                        <!-- <span class="pull-right">50%</span> -->
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                        </div>
+
+                        <strong>Backend Development</strong>
+                        <!-- <span class="pull-right">75%</span> -->
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                        </div>
+
+                        <strong>Mobile Development</strong>
+                        <!-- <span class="pull-right">70%</span> -->
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                        </div>
+
+                        <strong>DevOps</strong>
+                        <!-- <span class="pull-right">70%</span> -->
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                        </div>
+
+                        <strong>Databases</strong>
+                        <!-- <span class="pull-right">70%</span> -->
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-sm-12">
+                    <div class="about-image">
+                        <center>
+                            <img src="images/about-image.jpg" class="img-responsive img-circle" style="border: 5px #292b2c solid; width: 200px;" alt="">
+                        </center>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title">
+                        <h2>Skills</h2>
+                        <span class="line-bar">...</span>
+                    </div>
+                </div>
+
+                <!-- <div class="col-md-3 col-sm-6">
+                    <div class="work-thumb">
+                        <a href="images/work-image2.jpg" class="image-popup">
+                            <img src="images/database.png" class="img-responsive" alt="Work">
+
+                            <div class="work-info">
+                                <h3>Studio Bag</h3>
+                                <small>Branding</small>
+                            </div>
+                        </a>
+                    </div>
+                </div> -->
+
+                <div class="col-md-3 col-sm-6" style="margin-bottom: 4px !important;">
+                    <!-- WORK THUMB -->
+                    <div class="work-thumb" style="/*border: 2px #5bc0de solid; border-radius: 5px;">
+                        <center>
+                            <img src="images/php.png" class="img-responsive" alt="Work" style="width: 250px; height: 250px;">
+                        </center>
+
+                        <div class="work-info">
+                            <h3>PHP</h3>
+                            <small>CodeIgniter 3</small>
+                            <small>Yii 1</small>
+                            <small>Laravel</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6" style="margin-bottom: 4px !important;">
+                    <!-- WORK THUMB -->
+                    <div class="work-thumb">
+                        <center>
+                            <img src="images/python.jpg" class="img-responsive" alt="Work" style="width: 250px; height: 250px;">
+                        </center>
+
+                        <div class="work-info">
+                            <h3>Python</h3>
+                            <small>Django</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6" style="margin-bottom: 4px !important;">
+                    <!-- WORK THUMB -->
+                    <div class="work-thumb">
+                        <center>
+                            <img src="images/html5.jpg" class="img-responsive" alt="Work" style="width: 250px; height: 250px;">
+                        </center>
+
+                        <div class="work-info">
+                            <h3>HTML</h3>
+                            <small>HTML5</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6" style="margin-bottom: 4px !important;">
+                    <!-- WORK THUMB -->
+                    <div class="work-thumb">
+                        <center>
+                            <img src="images/css.png" class="img-responsive" alt="Work" style="width: 250px; height: 250px;">
+                        </center>
+
+                        <div class="work-info">
+                            <h3>CSS</h3>
+                            <small>Bootstrap</small>
+                            <small>Material UI</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6" style="margin-bottom: 4px !important;">
+                    <!-- WORK THUMB -->
+                    <div class="work-thumb">
+                        <center>
+                            <img src="images/JavaScript-logo.png" class="img-responsive" alt="Work" style="width: 250px; height: 250px;">
+                        </center>
+
+                        <div class="work-info">
+                            <h3>Javascript</h3>
+                            <small>Pure JS</small>
+                            <small>JQuery</small>
+                            <small>React JS</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6" style="margin-bottom: 4px !important;">
+                    <!-- WORK THUMB -->
+                    <div class="work-thumb">
+                        <center>
+                            <img src="images/dart.png" class="img-responsive" alt="Work" style="width: 250px; height: 250px;">
+                        </center>
+
+                        <div class="work-info">
+                            <h3>Dart</h3>
+                            <small>Flutter (Android/IOS Application Framework)</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6" style="margin-bottom: 4px !important;">
+                    <!-- WORK THUMB -->
+                    <div class="work-thumb">
+                        <center>
+                            <img src="images/SQL_database.jpg" class="img-responsive" alt="Work" style="width: 250px; height: 250px;">
+                        </center>
+
+                        <div class="work-info">
+                            <h3>Database</h3>
+                            <small>MySQL</small>
+                            <small>PostgreSQL</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6" style="margin-bottom: 4px !important;">
+                    <!-- WORK THUMB -->
+                    <div class="work-thumb">
+                        <center>
+                            <img src="images/api.jpg" class="img-responsive" alt="Work" style="width: 250px; height: 250px;">
+                        </center>
+
+                        <div class="work-info">
+                            <h3>API</h3>
+                            <small>Rest API</small>
+                            <small>Mapbox API</small>
+                            <small>Google API</small>
+                            <small>Facebook API</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-sm-6" style="margin-bottom: 4px !important;">
+                    <!-- WORK THUMB -->
+                    <div class="work-thumb">
+                        <center>
+                            <img src="images/devops.png" class="img-responsive" alt="Work" style="width: 250px; height: 250px;">
+                        </center>
+
+                        <div class="work-info">
+                            <h3>DevOps</h3>
+                            <small>Linux Server</small>
+                            <small>Docker</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Working Experience -->
+    <section id="work_experiences" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title">
+                        <h2>Work Experiences</h2>
+                        <span class="line-bar">...</span>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12" style="text-align: left;">
+                            <h4 style="font-weight: bolder;">PHP Programmer JG5</h4>
+                        </div>
+                        <div class="col-md-6 col-sm-12" style="text-align: right;">
+                            <p>April 2022 - Present</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12" style="text-align: left; margin-top: -15px;">
+                            <h4 style="font-weight: bolder;">PHP Programmer JG1</h4>
+                        </div>
+                        <div class="col-md-6 col-sm-12" style="text-align: right; margin-top: -15px;">
+                            <p>November 2022 - April 2022</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12" style="text-align: left;">
+                            <h5><a href="https://wesupportinc.com/main/" target="_blank" style="font-weight: bolder !important;">WeSupport Inc.</a> - 8741 Paseo de Roxas, Makati City, Metro Manila</h5>
+                        </div>
+                        <div class="col-md-12 col-sm-12" style="text-align: left;">
+                            <ul>
+                                <li>Worked as part of software development teams in the design, development, and support of both new and existing software products and systems; reporting status, monitoring issues/problems and recommending action plans.</li>
+                                <li>Configured Google analytics module for tracking the visitors for the website.</li>
+                                <li>Used Ajax for every page for dynamically displaying the data without a page refresh.</li>
+                                <li>Developed and maintained functions, procedures, triggers, indexes using MySQL database programming language.</li>
+                                <li>Identifying and solving issues caused by plugins or feeds under PHP, MySQL, HTML, CSS, Javascript and Jquery technology.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+                    <hr>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12" style="text-align: left;">
+                            <h4 style="font-weight: bolder;">Jr. PHP Developer</h4>
+                        </div>
+                        <div class="col-md-6 col-sm-12" style="text-align: right;">
+                            <p>October 2018 - November 2019</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12" style="text-align: left;">
+                            <h5><a href="https://www2.serviciofilipino.com/" target="_blank" style="font-weight: bolder !important;">Servicio Filipino Inc.</a> - SFI Corporate Center, 105 West Ave, Project 7, Quezon City, 1100 Metro Manila</h5>
+                        </div>
+                        <div class="col-md-12 col-sm-12" style="text-align: left;">
+                            <ul>
+                                <li>Became part of the development team of COGO ERP Systems.</li>
+                                <li>Worked as part of software development teams in the design, development, and support of both new and existing software products and systems; reporting status, monitoring issues/problems and recommending action plans.</li>
+                                <li>Used Ajax for every page for dynamically displaying the data without a page refresh.</li>
+                                <li>Identifying and solving issues caused by plugins or feeds under PHP, MySQL, HTML, CSS, Javascript and Jquery technology.</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title">
+                        <h2>Projects</h2>
+                        <span class="line-bar">...</span>
+                    </div>
+                    <p style="text-align: justify;">These are the projects that I made, have worked with a team, or have been working with in my career as a developer. They could give you an overview about the skill set I have and what I am capable of.</p>
+                    <p style="text-align: justify;">Some of them are corporate projects which I have collaborated with and some are individual projects that I was able to build in my spare time.</p><br>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="tabset">
+                        <!-- Tab 1 -->
+                        <input type="radio" name="tabset" id="tab1" aria-controls="wesupportinc_projects" checked>
+                        <label for="tab1">WeSupport Inc.</label>
+                        <!-- Tab 2 -->
+                        <input type="radio" name="tabset" id="tab2" aria-controls="serviciofilipinotinc_projects">
+                        <label for="tab2">Servicio Filipino Inc.</label>
+                        <!-- Tab 3 -->
+                        <input type="radio" name="tabset" id="tab3" aria-controls="other_projects">
+                        <label for="tab3">Others</label>
+
+                        <div class="tab-panels">
+                            <section id="wesupportinc_projects" class="tab-panel">
+                                <h2 hidden>Will be posted soon.</h2>
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4" style="justify-content: center">
+                                        <div class="bcontainer">
+                                            <div class="bcard">
+                                                <div class="bcard-header">
+                                                    <img src="images/theme_oilhome.jpg" alt="rover" />
+                                                </div>
+                                                <div class="bcard-body text-left">
+                                                    <span class="btag btag-teal" style="margin-bottom: 20px;">CodeIgniter 3 / MySQL / JQuery</span>
+                                                    <span><b>Name:</b><br>Obelisk Interlinked Learners' H.O.M.E.</span>
+                                                    <span><b>Description:</b><br>E-School ERP System</span>
+                                                    <span><b>PHP Framework:</b><br>Codeigniter 3</span>
+                                                    <span><b>Link URL:</b><br><a href="https://oilhomeschool.org/" target="_blank">https://oilhomeschool.org</a></span>
+                                                    <!-- <button class="btn btn-primary" style="border-radius: 10px; margin-top: 20px;"> More Details</button> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4" style="justify-content: center">
+                                        <div class="bcontainer">
+                                            <div class="bcard">
+                                                <div class="bcard-header">
+                                                    <img src="images/coachfirst_logo.png" alt="rover" />
+                                                </div>
+                                                <div class="bcard-body text-left">
+                                                    <span class="btag btag-teal" style="margin-bottom: 20px;">CodeIgniter 3 / MySQL / JQuery</span>
+                                                    <span><b>Name:</b><br> CoachFirst</span>
+                                                    <span><b>Description:</b><br>Sport Coach Appointment System</span>
+                                                    <span><b>PHP Framework:</b><br>Codeigniter 3</span>
+                                                    <span><b>Link URL:</b><br><a href="https://coachfirst.sg" target="_blank">https://coachfirst.sg</a></span>
+                                                    <!-- <button class="btn btn-primary" style="border-radius: 10px; margin-top: 20px;"> More Details</button> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4" style="justify-content: center">
+                                        <div class="bcontainer">
+                                            <div class="bcard">
+                                                <div class="bcard-header">
+                                                    <img src="images/superaire_logo.png" alt="rover" />
+                                                </div>
+                                                <div class="bcard-body text-left">
+                                                    <span class="btag btag-teal" style="margin-bottom: 20px;">CodeIgniter 3 / JQuery</span>
+                                                    <span><b>Name:</b><br>SUPER-AIRE</span>
+                                                    <span><b>Description:</b><br>Static Website</span>
+                                                    <span><b>PHP Framework:</b><br>Codeigniter 3</span>
+                                                    <span><b>Link URL:</b><br><a href="https://superaire.ph/" target="_blank">https://superaire.ph/</a></span>
+                                                    <!-- <button class="btn btn-primary" style="border-radius: 10px; margin-top: 20px;"> More Details</button> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4" style="justify-content: center">
+                                        <div class="bcontainer">
+                                            <div class="bcard">
+                                                <div class="bcard-header">
+                                                    <img src="images/acms.png" alt="rover" />
+                                                </div>
+                                                <div class="bcard-body text-left">
+                                                    <span class="btag btag-teal" style="margin-bottom: 20px;">CodeIgniter 3 / MySQL / JQuery</span>
+                                                    <span><b>Name:</b><br>Automated Campaign Management System (ACMS)</span>
+                                                    <span><b>Description:</b><br>N/A</span>
+                                                    <span><b>PHP Framework:</b><br>Codeigniter 3</span>
+                                                    <span><b>Link URL:</b><br>Under Development</span>
+                                                    <!-- <button class="btn btn-primary" style="border-radius: 10px; margin-top: 20px;"> More Details</button> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-4" style="justify-content: center">
+                                        <div class="bcontainer">
+                                            <div class="bcard">
+                                                <div class="bcard-header">
+                                                    <img src="images/wsi.jpg" alt="rover" />
+                                                </div>
+                                                <div class="bcard-body text-left">
+                                                    <span class="btag btag-teal" style="margin-bottom: 20px;">Smarty PHP Template Engine / MySQL / JQuery</span>
+                                                    <span><b>Name:</b><br>WSI Resume Builder</span>
+                                                    <span><b>Description:</b><br>Resume builder System</span>
+                                                    <span><b>PHP Framework:</b><br>Pure PHP</span>
+                                                    <span><b>Link URL:</b><br>Under Development</span>
+                                                    <!-- <button class="btn btn-primary" style="border-radius: 10px; margin-top: 20px;"> More Details</button> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </section>
+                            <section id="serviciofilipinotinc_projects" class="tab-panel">
+                                <h2 hidden>Will be posted soon.</h2>
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4" style="justify-content: center">
+                                        <div class="bcontainer">
+                                            <div class="bcard">
+                                                <div class="bcard-header">
+                                                    <img src="images/cogo.png" alt="rover" />
+                                                </div>
+                                                <div class="bcard-body text-left">
+                                                    <span class="btag btag-teal" style="margin-bottom: 20px;">CodeIgniter 3 / MySQL / JQuery</span>
+                                                    <span><b>Name:</b><br>COGO ERP Systems</span>
+                                                    <span><b>Description:</b><br>SFI ERP Systems<br>
+                                                        <ul>
+                                                            <li>Talent Management System</li>
+                                                            <li>Billing System</li>
+                                                            <li>Employee Portal</li>
+                                                        </ul>
+                                                    </span>
+                                                    <span><b>PHP Framework:</b><br>Codeigniter 3</span>
+                                                    <span><b>Link URL:</b><br>Not Available</span>
+                                                    <!-- <button class="btn btn-primary" style="border-radius: 10px; margin-top: 20px;"> More Details</button> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </section>
+                            <section id="other_projects" class="tab-panel">
+                                <h2>Will be posted soon.</p>
+                            </section>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </section>
+
+    <!-- Working Experience -->
+    <section id="education" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title">
+                        <h2>Education</h2>
+                        <span class="line-bar">...</span>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12" style="text-align: left;">
+                            <h4 style="font-weight: bolder;">Bachelor of Science in Information Technology</h4>
+                        </div>
+                        <div class="col-md-6 col-sm-12" style="text-align: right;">
+                            <p>April 2018</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12" style="text-align: left;">
+                            <h5><a href="https://neust.edu.ph/" target="_blank" style="font-weight: bolder !important;">Nueva Ecija University of Science and Technology</a> - Nueva Ecija</h5>
+                        </div>
+                        <div class="col-md-12 col-sm-12" style="text-align: left;">
+                            <p>Specialization in <b>Database Applications Programming</b></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+     <!-- Certificates and Seminars -->
+    <section id="certificates_seminars" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title">
+                        <h2>Certificates and Seminars</h2>
+                        <span class="line-bar">...</span>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12" style="text-align: left;">
+                            <h4 style="font-weight: bolder;">Imagine Camp 2017 - Microsoft Computer Society</h4>
+                        </div>
+                        <div class="col-md-6 col-sm-12" style="text-align: right;">
+                            <p>2017</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12" style="text-align: left;">
+                            <h5><a href="https://clsu.edu.ph/" target="_blank" style="font-weight: bolder !important;">Central Luzon State University</a> - Science City of Muñoz, Nueva Ecija</h5>
+                        </div>
+                        <div class="col-md-12 col-sm-12" style="text-align: left;">
+                            <h5>Central Luzon Youth Congress on Information Technology</h5>
+                        </div>
+                        <div class="col-md-12 col-sm-12" style="text-align: left;">
+                            <p>Topics:<p>
+                            <ul>
+                                <li>Android Mobile Apps Development</li>
+                                <li>Network Security</li>
+                                <li>Adobe Experience Design</li>
+                                <li>Arduino Microcontroller</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+                    <hr>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12" style="text-align: left;">
+                            <h4 style="font-weight: bolder;">Computer Systems Servicing II</h4>
+                        </div>
+                        <div class="col-md-6 col-sm-12" style="text-align: right;">
+                            <p>2017</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12" style="text-align: left;">
+                            <h5><a href="https://www.tesda.gov.ph/" target="_blank" style="font-weight: bolder !important;">TESDA</a> - Gapan City, Nueva Ecija</h5>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+                    <hr>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-12" style="text-align: left;">
+                            <h4 style="font-weight: bolder;">PHP Laravel Seminar</h4>
+                        </div>
+                        <div class="col-md-6 col-sm-12" style="text-align: right;">
+                            <p>2019</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12" style="text-align: left;">
+                            <h5><a href="https://www.facebook.com/groups/185448994945295" target="_blank" style="font-weight: bolder !important;">Laravel Philippines</a> - Quezon City, Metro Manila</h5>
+                        </div>
+                        <div class="col-md-12 col-sm-12" style="text-align: left;">
+                            <img src="images/laravel_ph.jpg" class="img-responsive" alt="Work" style="width: 600px;">
+                        </div>
+                        <div class="col-md-12 col-sm-12" style="text-align: left;">
+                            Laravel PH FB Group: <a href="https://www.facebook.com/groups/185448994945295" target="_blank" style="font-weight: bolder !important;">https://www.facebook.com/groups/185448994945295</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title">
+                        <h2>Get In Touch</h2>
+                        <br>
+                        <p style="color: blanchedalmond; text-align: justify;">If you have any questions, please feel free to drop me a line. If you don't get an answer immediately. I might just be travelling through the middle of nowhere. I'll get back to you as soon as I can. That's a promise!</p>
+                        <span class="line-bar">...</span>
+                    </div>
+                </div>
+
+                <div class="col-md-8 col-sm-8">
+
+                    <!-- CONTACT FORM HERE -->
+                    <form id="contact-form" role="form" action="#" method="post" onsubmit="submitMessage(event, $(this))" style="margin-bottom: 50px;">
+                        <div class="col-md-12 col-sm-12">
+                            <input type="text" class="form-control" placeholder="Full Name" id="cf-name" name="cf-name" required="">
+                        </div>
+
+                        <div class="col-md-6 col-sm-6">
+                            <input type="tel" class="form-control" placeholder="Subject" id="cf-number" name="cf-number" required="">
+                        </div>
+
+                        <div class="col-md-6 col-sm-6">
+                            <input type="email" class="form-control" placeholder="Your Email" id="cf-email" name="cf-email" required="">
+                        </div>
+
+                        <div class="col-md-12 col-sm-12">
+                            <textarea class="form-control" rows="6" placeholder="Your Message" id="cf-message" name="cf-message" required=""></textarea>
+                        </div>
+
+                        <div class="col-md-4 col-sm-12">
+                            <input type="submit" class="form-control" name="submit" value="Send Message">
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="col-md-4 col-sm-4" style="color: blanchedalmond; text-align: left;">
+
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <big style="font-weight: bolder;">Contact Details:</big><br>
+                            <p style="color: blanchedalmond;"><b>Personal Email:</b> jedgarf.dev12@gmail.com<br>
+                            <b>Company Email:</b> jfrancisco@wesupportinc.com</p>
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <hr>
+                        </div>
+                        <div class="col-md-12 col-sm-12 text-center">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                    <a href="https://facebook.com/jedgarf" target="_blank" style="color: #4267B2;" title="https://facebook.com/jedgarf"><i class="fa fa-facebook-square fa-5x"></i></a>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                    <a href="https://www.linkedin.com/in/jedgarf" target="_blank" style="color: #0072b1;" title="https://www.linkedin.com/in/jedgarf"><i class="fa fa-linkedin-square fa-5x"></i></a>
+                                </div>
+                                <div class="col-md-4 col-sm-4 col-xs-4">
+                                    <a href="https://github.com/jedgarf" target="_blank" style="color: #df4759;" title="https://github.com/jedgarf"><i class="fa fa-github-square fa-5x"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="footer-bottom">
+                        <div class="col-md-12 col-sm-12 text-center">
+                            <div class="copyright-text">
+                                <p>Copyright &copy; 2022 Personal Portfolio</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/custom.js"></script>
+
+    <script src="js/typed.js/lib/typed.js"></script>
+
+    <script>
+        var typed = new Typed('.typed-element', {
+            strings: [
+                'John Edgar Francisco',
+                ' a PHP Developer',
+                ' a Software Developer'
+            ],
+            typeSpeed: 0,
+            backSpeed: 0,
+            fadeOut: true,
+            loop: true
+        });
+
+        function submitMessage(evt, form) {
+            
+            evt.preventDefault();
+            // console.log(form.serialize());
+            alert("NOT AVAILABLE RIGHT NOW.");
+
+        }
+    </script>
+
+</body>
+
+</html>
