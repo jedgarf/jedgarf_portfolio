@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "[my-framework] build --output public"
+        "build": "others build --output public"
     },
     "author": "John Edgar Francisco",
     "license": "ISC",
