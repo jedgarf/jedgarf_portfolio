@@ -188,6 +188,182 @@
         .buser-info small {
             color: #545d7a;
         }
+
+        /*gallery*/
+        /** {
+          box-sizing: border-box;
+        }*/
+
+        .bcard-header > .column {
+          padding: 0 8px;
+        }
+
+        .bcard-header:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        .column {
+          float: left;
+          width: 25%;
+        }
+
+        /* The Modal (background) */
+        .modal {
+          display: none;
+          position: fixed;
+          z-index: 99999;
+          padding-top: 100px;
+          left: 0;
+          top: 0;
+          width: 100%;
+          /*margin-top: 5%;*/
+          height: 100%;
+          overflow: auto;
+          /*background-color: black;*/
+          background-color:rgba(18,14,13,0.9);
+        }
+
+        /* Modal Content */
+        .modal-content {
+          position: relative;
+          /*background-color: #fefefe;*/
+          background-color:rgba(18,14,13,0.9);
+          margin: auto;
+          padding: 0;
+          width: 90%;
+          max-width: 1200px;
+        }
+
+        /* The Close Button */
+        .close {
+          color: white;
+          position: absolute;
+          top: 10px;
+          right: 25px;
+          font-size: 35px;
+          font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+          color: #999;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+        .mySlides {
+          display: none;
+        }
+
+        .cursor {
+          cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: white;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+
+        img {
+          margin-bottom: -4px;
+        }
+
+        .caption-container {
+          text-align: center;
+          background-color: black;
+          padding: 2px 16px;
+          color: white;
+        }
+
+        .demo {
+          opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+          opacity: 1;
+        }
+
+        img.hover-shadow {
+          transition: 0.3s;
+        }
+
+        .hover-shadow:hover {
+          /*filter: brightness(50%);*/
+          /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
+        }
+
+
+        /* Parent Container */
+        .content_img{
+         position: relative;
+        }
+
+        /* Child Text Container */
+        .content_img div{
+         position: absolute;
+         bottom: 0;
+         right: 0;
+         background: black;
+         color: white;
+         margin-bottom: 5px;
+         font-family: sans-serif;
+         width: 150px;
+         padding: 8px 15px;
+         cursor: pointer;
+         /*opacity: 0;*/
+         /*visibility: hidden;*/
+         /*-webkit-transition: visibility 0s, opacity 0.5s linear; 
+         transition: visibility 0s, opacity 0.5s linear;*/
+        }
+
+        /* Hover on Parent Container */
+        .content_img:hover{
+         /*cursor: pointer;*/
+        }
+
+        .content_img:hover div{
+         width: 150px;
+         padding: 8px 15px;
+         /*visibility: visible;*/
+         /*opacity: 0.7; */
+        }
     </style>
 
     <script src="js/smtp.js"></script> 
@@ -344,6 +520,19 @@
                         <span class="line-bar">...</span>
                     </div>
                 </div>
+
+                <!-- <div class="col-md-3 col-sm-6">
+                    <div class="work-thumb">
+                        <a href="images/work-image2.jpg" class="image-popup">
+                            <img src="images/database.png" class="img-responsive" alt="Work">
+
+                            <div class="work-info">
+                                <h3>Studio Bag</h3>
+                                <small>Branding</small>
+                            </div>
+                        </a>
+                    </div>
+                </div> -->
 
                 <div class="col-md-3 col-sm-6" style="margin-bottom: 4px !important;">
                     <!-- WORK THUMB -->
@@ -593,12 +782,16 @@
                             <section id="wesupportinc_projects" class="tab-panel">
                                 <h2 hidden>Will be posted soon.</h2>
                                 <div class="row">
-                                    <div class="col-md-4 col-sm-4">
+                                    <div class="col-md-4 col-sm-6 col-xs-12">
                                         <center>
                                             <div class="bcontainer">
                                                 <div class="bcard">
                                                     <div class="bcard-header">
-                                                        <img src="images/theme_oilhome.jpg" alt="rover" />
+                                                        <!-- <img src="images/theme_oilhome.jpg" alt="rover" /> -->
+                                                        <div class="content_img">
+                                                            <img src="images/theme_oilhome.jpg" style="width:100%" class="hover-shadow">
+                                                            <div onclick="openModal();currentSlide(1)"><i class="fa fa-photo"></i> See Photos</div>
+                                                        </div>
                                                     </div>
                                                     <div class="bcard-body text-left">
                                                         <span class="btag btag-teal" style="margin-bottom: 20px;">CodeIgniter 3 / MySQL / JQuery</span>
@@ -612,12 +805,13 @@
                                             </div>
                                         </center>
                                     </div>
-                                    <div class="col-md-4 col-sm-4" style="justify-content: center">
+                                    <div class="col-md-4 col-sm-6 col-xs-12" style="justify-content: center">
                                         <center>
                                             <div class="bcontainer">
                                                 <div class="bcard">
                                                     <div class="bcard-header">
                                                         <img src="images/coachfirst_logo.png" alt="rover" />
+                                                        <!-- <img src="images/coachfirst_logo.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"> -->
                                                     </div>
                                                     <div class="bcard-body text-left">
                                                         <span class="btag btag-teal" style="margin-bottom: 20px;">CodeIgniter 3 / MySQL / JQuery</span>
@@ -631,7 +825,7 @@
                                             </div>
                                         </center>
                                     </div>
-                                    <div class="col-md-4 col-sm-4" style="justify-content: center">
+                                    <div class="col-md-4 col-sm-6 col-xs-12" style="justify-content: center">
                                         <center>
                                             <div class="bcontainer">
                                                 <div class="bcard">
@@ -650,7 +844,7 @@
                                             </div>
                                         </center>
                                     </div>
-                                    <div class="col-md-4 col-sm-4" style="justify-content: center">
+                                    <div class="col-md-4 col-sm-6 col-xs-12" style="justify-content: center">
                                         <center>
                                             <div class="bcontainer">
                                                 <div class="bcard">
@@ -669,7 +863,7 @@
                                             </div>
                                         </center>
                                     </div>
-                                    <div class="col-md-4 col-sm-4" style="justify-content: center">
+                                    <div class="col-md-4 col-sm-6 col-xs-12" style="justify-content: center">
                                         <center>
                                             <div class="bcontainer">
                                                 <div class="bcard">
@@ -692,7 +886,7 @@
                             <section id="serviciofilipinotinc_projects" class="tab-panel">
                                 <h2 hidden>Will be posted soon.</h2>
                                 <div class="row">
-                                    <div class="col-md-4 col-sm-4" style="justify-content: center">
+                                    <div class="col-md-4 col-sm-6 col-xs-12" style="justify-content: center">
                                         <center>
                                             <div class="bcontainer">
                                                 <div class="bcard">
@@ -722,7 +916,7 @@
                             <section id="other_projects" class="tab-panel">
                                 <h2 hidden>Will be posted soon.</h2>
                                 <div class="row">
-                                    <div class="col-md-4 col-sm-4" style="justify-content: center">
+                                    <div class="col-md-4 col-sm-6 col-xs-12" style="justify-content: center">
                                         <center>
                                             <div class="bcontainer">
                                                 <div class="bcard">
@@ -741,7 +935,7 @@
                                             </div>
                                         </center>
                                     </div>
-                                    <div class="col-md-4 col-sm-4" style="justify-content: center">
+                                    <div class="col-md-4 col-sm-6 col-xs-12" style="justify-content: center">
                                         <center>
                                             <div class="bcontainer">
                                                 <div class="bcard">
@@ -769,6 +963,62 @@
                 </div>
             </div>
     </section>
+
+    <!-- Oilhome Gallery -->
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+
+        <div class="mySlides">
+          <div class="numbertext">1 / 4</div>
+          <center>
+              <img src="images/oilhome1.PNG" style="width:70%">
+          </center>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 4</div>
+          <center>
+              <img src="images/oilhome2.PNG" style="width:70%">
+          </center>
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 4</div>
+          <center>
+              <img src="images/oilhome3.PNG" style="width:70%">
+          </center>
+        </div>
+        
+        <div class="mySlides">
+          <div class="numbertext">4 / 4</div>
+          <center>
+              <img src="images/oilhome4.PNG" style="width:70%">
+          </center>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+
+        <div class="column" style="margin-top: 10px;">
+          <img class="demo cursor" src="images/oilhome1.PNG" style="width:90%" onclick="currentSlide(1)" alt="Landing Page">
+        </div>
+        <div class="column" style="margin-top: 10px;">
+          <img class="demo cursor" src="images/oilhome2.PNG" style="width:90%" onclick="currentSlide(2)" alt="Admin Portal">
+        </div>
+        <div class="column" style="margin-top: 10px;">
+          <img class="demo cursor" src="images/oilhome3.PNG" style="width:90%" onclick="currentSlide(3)" alt="Parent Portal">
+        </div>
+        <div class="column" style="margin-top: 10px;">
+          <img class="demo cursor" src="images/oilhome4.PNG" style="width:90%" onclick="currentSlide(4)" alt="Student Portal">
+        </div>
+      </div>
+    </div>
 
      <!-- Certificates and Seminars -->
     <section id="achievements_seminars" data-stellar-background-ratio="0.5">
@@ -1037,6 +1287,44 @@
             //     message => alert("mail sent successfully")
             // );
 
+        }
+
+        // gallery
+        function openModal() {
+          document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+          document.getElementById("myModal").style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
         }
     </script>
 
