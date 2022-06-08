@@ -329,6 +329,84 @@
           /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
         }
 
+        /*home animation*/
+        .cd-intro-content h1,
+        .cd-intro-content p,
+        .cd-intro-content .cd-btn {
+          opacity: 0;
+          animation-delay: 0.3s;
+          animation-fill-mode: forwards;
+        }
+
+        .bouncy.cd-intro-content h1 {
+          animation-name: cd-bounce-right;
+        }
+
+        .bouncy.cd-intro-content p {
+          animation-name: cd-bounce-left;
+        }
+
+        .bouncy.cd-intro-content h1,
+        .bouncy.cd-intro-content p {
+          animation-duration: 0.6s;
+        }
+
+        .bouncy.cd-intro-content .cd-btn {
+          animation-name: cd-bounce-rotate;
+          animation-duration: 0.5s;
+        }
+
+        .bouncy.cd-intro-content .cd-btn.main-action {
+          animation-delay: 0.4s;
+        }
+
+        @keyframes cd-bounce-right {
+          0% {
+            opacity: .2;
+            transform: translateX(-200px);
+          }
+          60% {
+            opacity: .7;
+            transform: translateX(15px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes cd-bounce-left {
+          0% {
+            opacity: .2;
+            transform: translateX(200px);
+          }
+          60% {
+            opacity: .7;
+            transform: translateX(-15px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+
+        @keyframes cd-bounce-rotate {
+          0% {
+            opacity: .2;
+            transform: perspective(800px) rotateX(-80deg);
+          }
+          20% {
+            opacity: 1;
+          }
+          60% {
+            transform: perspective(800px) rotateX(20deg);
+          }
+          100% {
+            opacity: 1;
+            transform: perspective(800px) rotateX(0);
+          }
+        }
+
 
         /* Parent Container */
         .content_img{
@@ -372,11 +450,11 @@
 <body>
 
     <!-- PRE LOADER -->
-    <section class="preloader">
+    <!-- <section class="preloader">
         <div class="spinner">
             <span class="spinner-rotate"></span>
         </div>
-    </section>
+    </section> -->
 
 
     <!-- MENU -->
@@ -425,11 +503,13 @@
         <div class="container">
             <div class="row">
 
-                <div class="col-md-6 col-sm-12">
-                    <div class="home-info">
+                <div class="col-md-6 col-sm-12 cd-intro">
+                    <div class="home-info cd-intro-content bouncy">
                         <h1>I'm <b class="typed-element"></b></h1>
-                        <a href="#projects" class="btn section-btn smoothScroll"><i class="fa fa-code"></i> Projects</a>
-                        <a href="#contact" class="btn section-btn smoothScroll"><i class="fa fa-envelope"></i> Get In Touch</a>
+                        <div class="action-wrapper">
+                            <a href="#projects" class="btn section-btn smoothScroll cd-btn main-action"><i class="fa fa-code"></i> Projects</a>
+                            <a href="#contact" class="btn section-btn smoothScroll cd-btn"><i class="fa fa-envelope"></i> Get In Touch</a>
+                        </div>
                     </div>
                 </div>
 
@@ -457,7 +537,7 @@
                             <h2>About Me</h2>
                             <span class="line-bar">...</span>
                         </div>
-                        <p style="text-align: justify;">I have 3 years+ of experience as PHP Programmer/Developer in analysis, design, development, and management of web on windows based software application using Javascript/MySQL/Ajax/JQuery, HTML, API (PHP based Environment).</p>
+                        <p style="text-align: justify;">I have solid experience as PHP Programmer/Developer in analysis, design, development, and management of web on windows based software application using Javascript/MySQL/Ajax/JQuery, HTML, API (PHP based Environment).</p>
                     </div>
                 </div>
 
@@ -1111,13 +1191,6 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-12" style="text-align: left;">
                             <h4 style="font-weight: bolder;">Laravel PH Seminar</h4>
-                            <p>Topics:</p>
-                            <ul>
-                                <li>Best Practices of Laravel Web App Development</li>
-                                <li>Some tips to handle Big Data</li>
-                                <li>Introduce Tailwind CSS Framework</li>
-                                <li>Introduce Huawei Cloud Services</li>
-                            </ul>
                         </div>
                         <div class="col-md-6 col-sm-12" style="text-align: right;">
                             <p>2019</p>
@@ -1126,6 +1199,13 @@
                     <div class="row">
                         <div class="col-md-12 col-sm-12" style="text-align: left;">
                             <h5><a href="https://www.facebook.com/groups/185448994945295" target="_blank" style="font-weight: bolder !important;">Laravel Philippines</a> - Quezon City, Metro Manila</h5>
+                            <p>Topics:</p>
+                            <ul>
+                                <li>Best Practices of Laravel Web App Development</li>
+                                <li>Some tips to handle Big Data</li>
+                                <li>Introduce Tailwind CSS Framework</li>
+                                <li>Introduce Huawei Cloud Services</li>
+                            </ul>
                         </div>
                         <div class="col-md-12 col-sm-12" style="text-align: left;">
                             <img src="images/laravel_ph.jpg" class="img-responsive" alt="Work" style="width: 600px;">
@@ -1248,7 +1328,7 @@
             strings: [
                 'John Edgar Francisco',
                 ' a PHP Developer',
-                ' a Software Developer'
+                ' a Mobile App Developer'
             ],
             typeSpeed: 0,
             backSpeed: 0,
