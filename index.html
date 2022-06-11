@@ -1373,6 +1373,10 @@
                // console.log('SUCCESS!', response.status, response.text);
                 $("#contact-btn").removeClass('fa-spinner fa-spin');
                 $("#contact-btn").addClass('fa-send');
+                $("#cf-name").val("");
+                $("#cf-subject").val("");
+                $("#cf-email").val("");
+                $("#cf-message").val("");
                toastr.success('Your message was successfully sent.', '');
             }, function(error) {
                // console.log('FAILED...', error);
