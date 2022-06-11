@@ -1258,7 +1258,7 @@
                         </div>
 
                         <div class="col-md-4 col-sm-12">
-                            <input type="submit" class="form-control" name="submit" value="Send Message">
+                            <button type="submit" class="form-control contact-btn" name="submit" style="background: #ce3232; border-radius: 100px; color: #ffffff; font-weight: 500;"><i class="fa fa-send" id="contact-btn"></i> Send Message</button>
                         </div>
 
                     </form>
@@ -1349,6 +1349,9 @@
         });
 
         function submitMessage(evt, form) {
+
+            $("#contact-btn").removeClass('fa-send');
+            $("#contact-btn").addClass('fa-spinner fa-spin');
             
             evt.preventDefault();
             // alert("NOT AVAILABLE RIGHT NOW.");
@@ -1368,9 +1371,13 @@
             emailjs.send('service_wx34j79', 'template_mzwjhfa', templateParams)
             .then(function(response) {
                // console.log('SUCCESS!', response.status, response.text);
+                $("#contact-btn").removeClass('fa-spinner fa-spin');
+                $("#contact-btn").addClass('fa-send');
                toastr.success('Your message was successfully sent.', '');
             }, function(error) {
                // console.log('FAILED...', error);
+                $("#contact-btn").removeClass('fa-spinner fa-spin');
+                $("#contact-btn").addClass('fa-send');
                toastr.error('Unable to send message right now.', '');
             });
 

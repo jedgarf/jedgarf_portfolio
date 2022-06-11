@@ -715,6 +715,13 @@ section {
     font-weight: 500;
 }
 
+#contact .contact-btn {
+    background: #ce3232;
+    border-radius: 100px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
 
 /*---------------------------------------
      FOOTER              
