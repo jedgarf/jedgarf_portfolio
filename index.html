@@ -18,6 +18,9 @@
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/templatemo-style.css">
 
+    <!-- Toastr -->
+    <link href="js/toastr/build/toastr.css" rel="stylesheet" type="text/css" />
+
     <style>
         .tabset>input[type="radio"] {
             position: absolute;
@@ -623,7 +626,7 @@
 
                         <div class="work-info">
                             <h3>PHP</h3>
-                            <small>CodeIgniter 3</small>
+                            <small>CodeIgniter</small>
                             <small>Yii 1</small>
                             <small>Laravel</small>
                         </div>
@@ -1321,51 +1324,59 @@
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
 
+    <!-- toastr -->
+    <script src="js/toastr/toastr.js"></script>
+
     <script src="js/typed.js/lib/typed.js"></script>
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
     <script>
+
+        (function(){
+          emailjs.init("EvwaE1j2xHA8E1MfR");
+        })();
+
         var typed = new Typed('.typed-element', {
             strings: [
-                'John Edgar Francisco',
-                ' a PHP Developer',
-                ' a Mobile App Developer'
+                ' John Edgar Francisco',
+                ' a Mid PHP Developer'
             ],
-            typeSpeed: 0,
-            backSpeed: 0,
-            fadeOut: true,
+            typeSpeed: 10,
+            backSpeed: 8,
+            fadeOut: false,
             loop: true
         });
 
         function submitMessage(evt, form) {
             
             evt.preventDefault();
-            // console.log(form.serializeArray()[2].value);
-            alert("NOT AVAILABLE RIGHT NOW.");
-            console.log("test: ");
-            // console.log(process.env.env_variable);
+            // alert("NOT AVAILABLE RIGHT NOW.");
 
             var fullname = form.serializeArray()[0].value;
             var subject = form.serializeArray()[1].value;
             var email = form.serializeArray()[2].value;
             var message = form.serializeArray()[3].value;
 
-            // system email
-            var sender_email = "info.jedgarfdev@gmail.com";
-            var email_password = "";
+            var messageContent = "";
+            messageContent += "Full Name: " + fullname + " / ";
+            messageContent += "Subject: " + subject + " / ";
+            messageContent += "Email: " + email + " / ";
+            messageContent += "Message: " + message + " ";
 
-            var email_to = "jedgarf.dev12@gmail.com";
-
-            // Email.send({
-            //     Host: "smtp.gmail.com",
-            //     Username : sender_email,
-            //     Password : email_password,
-            //     To : email_to,
-            //     From : sender_email,
-            //     Subject : subject,
-            //     Body : message,
-            // }).then(
-            //     message => alert("mail sent successfully")
-            // );
+            var templateParams = {
+                from_name: fullname,
+                message: messageContent
+            };
+             
+            emailjs.send('service_wx34j79', 'template_mzwjhfa', templateParams)
+            .then(function(response) {
+               // console.log('SUCCESS!', response.status, response.text);
+               toastr.success('Your message was successfully sent.', '');
+            }, function(error) {
+               // console.log('FAILED...', error);
+               toastr.error('Unable to send message right now.', '');
+            });
 
         }
 
