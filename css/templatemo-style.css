@@ -716,6 +716,7 @@ section {
 }
 
 #contact .contact-btn {
+    height: 55px;
     background: #ce3232;
     border-radius: 100px;
     color: #ffffff;
