@@ -1358,15 +1358,11 @@
             var email = form.serializeArray()[2].value;
             var message = form.serializeArray()[3].value;
 
-            var messageContent = "";
-            messageContent += "Full Name: " + fullname + " / ";
-            messageContent += "Subject: " + subject + " / ";
-            messageContent += "Email: " + email + " / ";
-            messageContent += "Message: " + message + " ";
-
             var templateParams = {
                 from_name: fullname,
-                message: messageContent
+                subject: subject,
+                email: email,
+                message: message
             };
              
             emailjs.send('service_wx34j79', 'template_mzwjhfa', templateParams)
