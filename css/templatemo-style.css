@@ -9,6 +9,7 @@ http://www.templatemo.com/tm-509-hydro
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600');
 body {
     background: #ffffff;
+    /*background-color: #1d1d1d !important;*/
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
@@ -336,6 +337,7 @@ section {
 
 #home {
     background: url('../images/home-bg.jpg') no-repeat center center;
+    /*background-color: #3b2227 !important;*/
     background-size: cover;
     vertical-align: middle;
     display: -webkit-box;
@@ -416,6 +418,18 @@ section {
 
 .about-info {
     margin-top: 60px;
+}
+
+#about .duties-info:first-child {
+    margin-right: 40px;
+}
+
+.duties-info .section-title {
+    margin: 40px 0 40px 0;
+}
+
+.duties-info {
+    /*margin-top: 60px;*/
 }
 
 .skill-thumb strong {
@@ -1043,6 +1057,12 @@ footer span,
         margin-right: 0;
     }
     .about-info {
+        margin: 40px 0 40px 0;
+    }
+    #about .duties-info:first-child {
+        margin-right: 0;
+    }
+    .duties-info {
         margin: 40px 0 40px 0;
     }
     .google-map {
