@@ -336,7 +336,7 @@ section {
   -----------------------------------------*/
 
 #home {
-    background: url('../images/home-bg.jpg') no-repeat center center;
+    /*background: url('../images/home-bg.jpg') no-repeat center center;*/
     /*background-color: #3b2227 !important;*/
     background-size: cover;
     vertical-align: middle;
