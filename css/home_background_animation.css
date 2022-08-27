@@ -3,7 +3,7 @@
 }
  #home {
 	 background-color: black;
-	 background-image: radial-gradient(circle at center, white 0%, red 10%, #1d1d1d 60%);
+	 background-image: radial-gradient(circle at center, white 0%, red 10%, gray 60%);
 	 /*overflow: hidden;*/
 }
  .wrap {
