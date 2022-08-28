@@ -247,6 +247,19 @@
         font-size: 20px;
     }
 
+    /*section animation*/
+    .reveal{
+      position: relative;
+      transform: translateY(150px);
+      opacity: 0;
+      transition: 1s all ease;
+    }
+
+    .reveal.active{
+      transform: translateY(0);
+      opacity: 1;
+    }
+
     </style>
 
     <script src="js/smtp.js"></script> 
@@ -854,7 +867,7 @@
 
     <!-- ABOUT -->
     <section id="about" class="show-on-scroll" data-stellar-background-ratio="0.5" style="margin-bottom: 100px;">
-        <div class="container">
+        <div class="container reveal">
             <div class="row">
 
                 <div class="col-md-6 col-sm-12">
@@ -1105,7 +1118,7 @@
 
     <!-- Skills -->
     <section id="skills" data-stellar-background-ratio="0.5">
-        <div class="container">
+        <div class="container reveal">
             <div class="row">
 
                 <div class="col-md-12 col-sm-12">
@@ -1219,7 +1232,7 @@
 
     <!-- Working Experience -->
     <section id="work_experiences" data-stellar-background-ratio="0.5">
-        <div class="container">
+        <div class="container reveal">
             <div class="row">
 
                 <div class="col-md-12 col-sm-12">
@@ -1304,7 +1317,7 @@
 
     <!-- Projects -->
     <section id="projects" data-stellar-background-ratio="0.5">
-        <div class="container">
+        <div class="container reveal">
             <div class="row">
 
                 <div class="col-md-12 col-sm-12">
@@ -1594,7 +1607,7 @@
 
      <!-- Certificates and Seminars -->
     <section id="achievements_seminars" data-stellar-background-ratio="0.5">
-        <div class="container">
+        <div class="container reveal">
             <div class="row">
 
                 <div class="col-md-12 col-sm-12">
@@ -1854,7 +1867,7 @@
 
 
     <!-- FOOTER -->
-    <footer data-stellar-background-ratio="0.5">
+    <!-- <footer data-stellar-background-ratio="0.5">
         <div class="container">
             <div class="row">
 
@@ -1870,7 +1883,7 @@
 
             </div>
         </div>
-    </footer>
+    </footer> -->
 
     <!-- SCRIPTS -->
     <script src="js/jquery.js"></script>
@@ -2010,6 +2023,24 @@
           // document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
           window.scrollTo({top: 0, behavior: 'smooth'});
         } 
+
+        function reveal() {
+          var reveals = document.querySelectorAll(".reveal");
+
+          for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 150;
+
+            if (elementTop < windowHeight - elementVisible) {
+              reveals[i].classList.add("active");
+            } else {
+              reveals[i].classList.remove("active");
+            }
+          }
+        }
+
+        window.addEventListener("scroll", reveal);
     </script>
 
 </body>
