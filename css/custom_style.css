@@ -425,3 +425,7 @@ img.hover-shadow {
 .duties-info li { margin-left: -20px; }
 
 .duties-info li:before { content: '⚡'; margin-left: -20px; margin-right: 10px; } 
+
+.about-info li { margin-left: -20px; }
+
+.about-info li:before { content: '⚡'; margin-left: -20px; margin-right: 10px; } 
