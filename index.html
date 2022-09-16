@@ -250,13 +250,13 @@
     /*section animation*/
     .reveal{
       position: relative;
-      transform: translateY(150px);
+      transform: translateX(-150px);
       opacity: 0;
       transition: 1s all ease;
     }
 
     .reveal.active{
-      transform: translateY(0);
+      transform: translateX(0);
       opacity: 1;
     }
 
@@ -318,7 +318,8 @@
                     <li><a href="#skills" class="smoothScroll">Skills</a></li>
                     <li><a href="#work_experiences" class="smoothScroll">Professional Experiences</a></li>
                     <li><a href="#projects" class="smoothScroll">Projects</a></li>
-                    <li><a href="#achievements_seminars" class="smoothScroll">Educations and Seminars</a></li>
+                    <li><a href="#educations" class="smoothScroll">Educations</a></li>
+                    <li><a href="#achievements_seminars" class="smoothScroll">Certifications</a></li>
                     <li><a href="#contact" class="smoothScroll">Contacts</a></li>
                 </ul>
 
@@ -1271,14 +1272,14 @@
                     <div class="container">
                         <ul class="timeline">
                             <li>
-                              <div class="timeline-badge"><i class="fa fa-briefcase"></i></div>
+                              <div class="timeline-badge primary"><i class="fa fa-briefcase"></i></div>
                               <div class="timeline-panel animated slideInLeft">
                                 <div class="timeline-heading">
                                   <h4 class="timeline-title">PHP Programmer JG5</h4>
                                   <a href="https://wesupportinc.com/main/" target="_blank"><h5 class="timeline-title"><img src="images/wsi.jpg" width="18px" style="margin-top: -8px;"> WeSupport Inc.</h5></a>
                                   <p><small class="text-muted"><i class="fa fa-clock-o"></i> April 2022 - Present</small></p>
                                 </div>
-                                <div class="timeline-body" style="text-align: left; font-weight: normal;">
+                                <div class="timeline-body" style="text-align: left; font-weight: normal;" hidden>
                                   <ul>
                                       <li>Worked as part of software development teams in the design, development, and support of both new and existing software products and systems; reporting status, monitoring issues/problems and recommending action plans.</li>
                                       <li>Configured Google analytics module for tracking the visitors for the website.</li>
@@ -1292,14 +1293,14 @@
                               </div>
                             </li>
                             <li>
-                              <div class="timeline-badge"><i class="fa fa-briefcase"></i></div>
+                              <div class="timeline-badge warning"><i class="fa fa-briefcase"></i></div>
                               <div class="timeline-panel animated slideInLeft">
                                 <div class="timeline-heading">
                                   <h4 class="timeline-title">PHP Programmer JG1</h4>
                                   <a href="https://wesupportinc.com/main/" target="_blank"><h5 class="timeline-title"><img src="images/wsi.jpg" width="18px" style="margin-top: -8px;"> WeSupport Inc.</h5></a>
                                   <p><small class="text-muted"><i class="fa fa-clock-o"></i> Nov. 2019 - April 2022</small></p>
                                 </div>
-                                <div class="timeline-body" style="text-align: left; font-weight: normal;">
+                                <div class="timeline-body" style="text-align: left; font-weight: normal;" hidden>
                                   <ul>
                                       <li>Worked as part of software development teams in the design, development, and support of both new and existing software products and systems; reporting status, monitoring issues/problems and recommending action plans.</li>
                                       <li>Configured Google analytics module for tracking the visitors for the website.</li>
@@ -1311,14 +1312,14 @@
                               </div>
                             </li>
                             <li class="timeline-inverted">
-                              <div class="timeline-badge warning"><i class="fa fa-briefcase"></i></div>
+                              <div class="timeline-badge"><i class="fa fa-briefcase"></i></div>
                               <div class="timeline-panel animated slideInRight">
                                 <div class="timeline-heading">
                                   <h4 class="timeline-title">Junior PHP Developer</h4>
                                   <a href="https://www2.serviciofilipino.com/" target="_blank"><h5 class="timeline-title"><img src="images/sfi_logo.png" width="18px" style="margin-top: -8px;"> Servicio Filipino Inc.</h5></a>
                                   <p><small class="text-muted"><i class="fa fa-clock-o"></i> Oct. 2018 - Nov. 2019</small></p>
                                 </div>
-                                <div class="timeline-body" style="text-align: left; font-weight: normal;">
+                                <div class="timeline-body" style="text-align: left; font-weight: normal;" hidden>
                                     <ul>
                                         <li>Became part of the development team of COGO ERP Systems.<br>
                                             <ul>
@@ -1629,14 +1630,14 @@
       </div>
     </div>
 
-     <!-- Certificates and Seminars -->
-    <section id="achievements_seminars" data-stellar-background-ratio="0.5">
+    <!-- Educations -->
+    <section id="educations" data-stellar-background-ratio="0.5">
         <div class="container reveal">
             <div class="row">
 
                 <div class="col-md-12 col-sm-12">
                     <div class="section-title">
-                        <h2>Educations and Seminars</h2>
+                        <h2>Educations</h2>
                         <span class="line-bar">...</span>
                     </div>
                 </div>
@@ -1660,7 +1661,24 @@
                             </div>
                         </div>
                     </div>
-                    <hr>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Certificates and Seminars -->
+    <section id="achievements_seminars" data-stellar-background-ratio="0.5">
+        <div class="container reveal">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title">
+                        <h2>Certifications</h2>
+                        <span class="line-bar">...</span>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
                     <div class="row">
 
                         <div class="col-md-4 col-sm-6 col-sm-6">
