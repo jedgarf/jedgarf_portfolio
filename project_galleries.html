@@ -1,0 +1,102 @@
+
+<!-- -------------------------------------------------------------------------------------------------------------- -->
+
+<!-- Oilhome Gallery -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <center>
+          <img src="images/oilhome1.PNG" style="width:70%">
+      </center>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <center>
+          <img src="images/oilhome2.PNG" style="width:70%">
+      </center>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <center>
+          <img src="images/oilhome3.PNG" style="width:70%">
+      </center>
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <center>
+          <img src="images/oilhome4.PNG" style="width:70%">
+      </center>
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column" style="margin-top: 10px;">
+      <img class="demo cursor" src="images/oilhome1.PNG" style="width:90%" onclick="currentSlide(1)" alt="Landing Page">
+    </div>
+    <div class="column" style="margin-top: 10px;">
+      <img class="demo cursor" src="images/oilhome2.PNG" style="width:90%" onclick="currentSlide(2)" alt="Admin Portal">
+    </div>
+    <div class="column" style="margin-top: 10px;">
+      <img class="demo cursor" src="images/oilhome3.PNG" style="width:90%" onclick="currentSlide(3)" alt="Parent Portal">
+    </div>
+    <div class="column" style="margin-top: 10px;">
+      <img class="demo cursor" src="images/oilhome4.PNG" style="width:90%" onclick="currentSlide(4)" alt="Student Portal">
+    </div>
+  </div>
+</div>
+
+
+<!-- ------------------------------------------------------------------------------------------------------------------- -->
+
+
+<script type="text/javascript">
+  // gallery
+  function openModal() {
+    document.getElementById("myModal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("myModal").style.display = "none";
+  }
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("demo");
+    var captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+</script>
