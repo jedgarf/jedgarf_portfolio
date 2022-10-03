@@ -39,6 +39,80 @@
 
     <link rel="stylesheet" type="text/css" href="css/custom_style2.css" />
 
+    <style type="text/css">
+        
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 2000; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      padding: 0;
+      border: 1px solid #888;
+      width: 80%;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+      -webkit-animation-name: animatetop;
+      -webkit-animation-duration: 0.4s;
+      animation-name: animatetop;
+      animation-duration: 0.4s
+    }
+
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+      from {top:-300px; opacity:0} 
+      to {top:0; opacity:1}
+    }
+
+    @keyframes animatetop {
+      from {top:-300px; opacity:0}
+      to {top:0; opacity:1}
+    }
+
+    /* The Close Button */
+    .close {
+      color: white;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .modal-header {
+      padding: 2px 16px;
+      /*background-color: #5cb85c;*/
+      /*color: white;*/
+    }
+
+    .modal-body {padding: 20px 20px;}
+
+    .modal-footer {
+      padding: 2px 16px;
+      /*background-color: #5cb85c;*/
+      /*color: white;*/
+    }
+
+    </style>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-01SMNF2LZY"></script>
     <script>
@@ -762,7 +836,7 @@
                                   </div>
                                 </div>
                                 <div class="panel-footer">
-                                    <a href="javascript:void();"><button class="btn btn-primary btn-sm disabled">View Certificate</button></a>
+                                    <a href="javascript:void();" onclick="viewCertificate('image', 'azure_data_engineer.jpg')"><button class="btn btn-primary btn-sm">View Certificate</button></a>
                                 </div>
                             </div>
                         </div>
@@ -777,7 +851,7 @@
                                   <small>DICT Online Event</small>
                                 </div>
                                 <div class="panel-footer">
-                                    <a href="javascript:void();"><button class="btn btn-primary btn-sm disabled">View Certificate</button></a>
+                                    <a href="javascript:void();" onclick="viewCertificate('image', 'intro_of_canva.jpg')"><button class="btn btn-primary btn-sm">View Certificate</button></a>
                                 </div>
                             </div>
                         </div>
@@ -803,7 +877,7 @@
                                   </div>
                                 </div>
                                 <div class="panel-footer">
-                                    <a href="javascript:void();"><button class="btn btn-primary btn-sm disabled">View Certificate</button></a>
+                                    <a href="javascript:void();" onclick="viewCertificate('image', '')"><button class="btn btn-primary btn-sm">View Certificate</button></a>
                                 </div>
                             </div>
                         </div>
@@ -826,7 +900,7 @@
                                   </div>
                                 </div>
                                 <div class="panel-footer">
-                                    <a href="javascript:void();"><button class="btn btn-primary btn-sm disabled">View Certificate</button></a>
+                                    <a href="javascript:void();" onclick="viewCertificate('image', '')"><button class="btn btn-primary btn-sm">View Certificate</button></a>
                                 </div>
                             </div>
                         </div>
@@ -846,7 +920,7 @@
                                   </div>
                                 </div>
                                 <div class="panel-footer">
-                                    <a href="javascript:void();"><button class="btn btn-primary btn-sm disabled">View Certificate</button></a>
+                                    <a href="javascript:void();" onclick="viewCertificate('image', '')"><button class="btn btn-primary btn-sm">View Certificate</button></a>
                                 </div>
                             </div>
                         </div>
@@ -869,7 +943,7 @@
                                   </div>
                                 </div>
                                 <div class="panel-footer">
-                                    <a href="javascript:void();"><button class="btn btn-primary btn-sm disabled">View Certificate</button></a>
+                                    <a href="javascript:void();" onclick="viewCertificate('image', '')"><button class="btn btn-primary btn-sm">View Certificate</button></a>
                                 </div>
                             </div>
                         </div>
@@ -889,7 +963,7 @@
                                   </div>
                                 </div>
                                 <div class="panel-footer">
-                                    <a href="javascript:void();"><button class="btn btn-primary btn-sm disabled">View Certificate</button></a>
+                                    <a href="javascript:void();" onclick="viewCertificate('image', '')"><button class="btn btn-primary btn-sm">View Certificate</button></a>
                                 </div>
                             </div>
                         </div>
@@ -908,7 +982,7 @@
                                   </div>
                                 </div>
                                 <div class="panel-footer">
-                                    <a href="javascript:void();"><button class="btn btn-primary btn-sm disabled">View Certificate</button></a>
+                                    <a href="javascript:void();" onclick="viewCertificate('image', '')"><button class="btn btn-primary btn-sm">View Certificate</button></a>
                                 </div>
                             </div>
                         </div>
@@ -919,6 +993,27 @@
             </div>
         </div>
     </section>
+
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- Modal -->
+    <div id="certificateModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="certificateModalClose" class="close">&times;</span>
+          <h3><i class="fa fa-certificate"></i> Certificate</h3>
+        </div>
+        <div class="modal-body" id="certificateModalContent">
+            sfd
+        </div>
+        <!-- <div class="modal-footer">
+          <h3>Modal Footer</h3>
+        </div> -->
+      </div>
+
+    </div>
 
     <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
@@ -1058,6 +1153,14 @@
 
         // --------------------------------------------------------------------------------
 
+        // disable save images
+
+        $("body").on("contextmenu", "img", function(e) {
+          return false;
+        });
+
+        // --------------------------------------------------------------------------------
+
         // Typing Animation
         var typed = new Typed('.typed-element', {
             strings: [
@@ -1164,6 +1267,38 @@
         window.addEventListener("scroll", reveal);
 
         // --------------------------------------------------------------------------------
+
+        // Modal
+
+        document.getElementById("certificateModalClose").onclick = function() {
+          document.getElementById("certificateModal").style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == document.getElementById("certificateModal")) {
+            document.getElementById("certificateModal").style.display = "none";
+          }
+        }
+
+        function viewCertificate(fileType, fileName) {
+            
+            // certificateModal
+            // modal-title
+            // modal-footer
+            // modal-body
+
+            var modal = document.getElementById("certificateModal");
+
+            if (fileName != "") {
+                $("#certificateModalContent").html("<center><img draggable='false' src='./images/certificates/" + fileName + "' class='img-fluid img-responsive' width='500px'></center>");
+            } else {
+                $("#certificateModalContent").html("<center>To be posted soon.</center>");
+            }
+
+            modal.style.display = "block";
+
+        }
     </script>
 
 </body>
