@@ -229,7 +229,7 @@
                             <span class="line-bar">...</span>
                         </div>
                         <!-- <p style="text-align: justify;">I have solid experience as PHP Full Stack Programmer/Developer in analysis, design, development, and management of web on windows based software application using HTML5, CSS3/Bootstrap, Javascript/Ajax/JQuery/ReactJS, MySQL/PostgreSQL and API (PHP based Environment).</p> -->
-                        <p style="text-align: justify;">Hi There! I'm <b>John Edgar Jr. Francisco</b>. A <b>Full Stack Developer</b> having specialization in <b>Frontend and Backend Development</b>. I have 4 years of working experience in <b>Full Stack Development</b> having strong PHP skills. I have backend skills in <b>Codeigniter, Yii 1.1, Laravel and Django</b> and I also have frontend skills in <b>HTML5, CSS3, Bootstrap, Javascript, Jquery, ReactJS and Flutter for Mobile Application Development</b>, aside from my software development skills, I also practicing some DevOps skills like <b>Docker and Linux based server management</b>.</p>
+                        <p style="text-align: justify;">Hi There! I'm <b>John Edgar Jr. Francisco</b>. A <b>Full Stack Developer</b> having specialization in <b>Frontend and Backend Development</b>. I have 4 years of working experience in <b>Full Stack Development</b> having strong PHP skills. I have backend skills in <b>Codeigniter, Yii 1.1, Laravel/Lumen and NodeJS(ExpressJS)</b> and I also have frontend skills in <b>HTML5, CSS3, Bootstrap, Javascript, Jquery, ReactJS and Flutter for Mobile Application Development</b>, aside from my software development skills, I also practicing Mobile App Development using <b>Flutter</b>.</p>
 
                         <p style="text-align: justify;">Apart from coding, some other activities that I love to do!</p>
                         <ul>
@@ -331,9 +331,9 @@
                         <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-yii-plain-wordmark colored" title="Yii 1.1"></i>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
+                        <!-- <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-django-plain-wordmark colored" title="Django"></i>
-                        </div>
+                        </div> -->
                         <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-nodejs-plain-wordmark colored" title="NodeJS"></i>
                         </div>
@@ -393,7 +393,7 @@
                         </div> -->
                         <ul style="font-weight: normal;">
                             <!-- <li style="margin-bottom: 20px;">Develop highly interactive Front end / User Interfaces for your web and mobile applications.</li> -->
-                            <li style="margin-bottom: 20px;">Creating application backend in CodeIgniter, Yii 1.1, Laravel, Lumen, Django and NodeJS(ExpressJS).</li>
+                            <li style="margin-bottom: 20px;">Creating application backend in CodeIgniter, Yii 1.1, Laravel/Lumen and NodeJS(ExpressJS).</li>
                             <li style="margin-bottom: 20px;">Developing REST API with JWT Authentication.</li>
                             <li style="margin-bottom: 20px;">Knowledgeable in JavaScript Libraries like JQuery and ReactJS.</li>
                             <li style="margin-bottom: 20px;">Building responsive web pages using Bootstrap.</li>
@@ -1102,7 +1102,7 @@
                     <textarea class="form-control" name="rmessage" id="rmessage" style="resize: none;" required></textarea>
                 </div>
                 <div class="form-group text-right">
-                    <button class="btn btn-primary btn-sm">Submit</button>
+                    <button class="btn btn-primary btn-sm"><i class="fa fa-send" id="rcv-btn"></i> Submit</button>
                 </div>
             </form>
         </div>
@@ -1337,6 +1337,8 @@
         function sendRequestCV(evt, form) {
             
             evt.preventDefault();
+
+            var modal = document.getElementById("requestCVModal");
             var remail = document.getElementById("remail").value;
             var rmessage = document.getElementById("rmessage").value;
             // alert("NOT AVAILABLE RIGHT NOW.");
@@ -1346,16 +1348,20 @@
                 message: rmessage
             };
 
-            $("#rmcv-btn").removeClass('fa-send');
-            $("#rmcv-btn").addClass('fa-spinner fa-spin');
+            $("#rcv-btn").removeClass('fa-send');
+            $("#rcv-btn").addClass('fa-spinner fa-spin');
              
             emailjs.send('service_wx34j79', 'template_ekndomq', templateParams)
             .then(function(response) {
+               $("#rcv-btn").removeClass('fa-spinner fa-spin');
+               $("#rcv-btn").addClass('fa-send');
                $("#remail").val("");
                $("#rmessage").val("");
                modal.style.display = "none";
                toastr.success('Your request was successfully sent.', '');
             }, function(error) {
+               $("#rcv-btn").removeClass('fa-spinner fa-spin');
+               $("#rcv-btn").addClass('fa-send');
                toastr.error('Unable to send request right now.', '');
             });
         }
