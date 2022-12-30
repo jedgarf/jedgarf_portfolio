@@ -1075,7 +1075,36 @@
           <h3><i class="fa fa-certificate"></i> Certificate</h3>
         </div>
         <div class="modal-body" id="certificateModalContent">
-            sfd
+        </div>
+        <!-- <div class="modal-footer">
+          <h3>Modal Footer</h3>
+        </div> -->
+      </div>
+
+    </div>
+
+    <div id="requestCVModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="requestCVModalClose" class="close">&times;</span>
+          <h3><i class="fa fa-file"></i> Request my CV</h3>
+        </div>
+        <div class="modal-body" id="requestCVModalContent">
+            <form method="POST" onsubmit="sendRequestCV(event, this)">
+                <div class="form-group">
+                    <label>Email <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" name="remail" id="remail" required>
+                </div>
+                <div class="form-group">
+                    <label>Message <span class="text-danger">*</span></label>
+                    <textarea class="form-control" name="rmessage" id="rmessage" style="resize: none;" required></textarea>
+                </div>
+                <div class="form-group text-right">
+                    <button class="btn btn-primary btn-sm">Submit</button>
+                </div>
+            </form>
         </div>
         <!-- <div class="modal-footer">
           <h3>Modal Footer</h3>
@@ -1095,7 +1124,7 @@
                     <div class="section-title">
                         <h2>Get In Touch</h2>
                         <br>
-                        <p style="color: blanchedalmond; text-align: center;">If you have any questions, please feel free to drop me a line. I’ll try my best to get back to you!</p>
+                        <p style="color: blanchedalmond; text-align: center;">Whether you want to get in touch, talk about a project collaboration, or just say hi, I'd love to hear from you. Simply fill the from and send me an email.</p>
                         <span class="line-bar">...</span>
                     </div>
                 </div>
@@ -1134,6 +1163,9 @@
                             <big style="font-weight: bolder;">You can also contact me at the places mentioned below.</big><br><br>
                             <p style="color: blanchedalmond;"><b>Personal Email:</b> <a href="mailto:jedgarf.dev12@gmail.com" style="color: #ffffff;">jedgarf.dev12@gmail.com</a><br>
                             <b>Company Email:</b> <a href="mailto:jfrancisco@wesupportinc.com" style="color: #ffffff;">jfrancisco@wesupportinc.com</a></p>
+                        </div>
+                        <div class="col-md-12 col-sm-12">
+                            <button class="btn btn-danger" onclick="requestMyCV()">Request my CV</button>
                         </div>
                         <div class="col-md-12 col-sm-12">
                             <hr>
@@ -1213,12 +1245,12 @@
         // --------------------------------------------------------------------------------
 
         // Home Animation
-        var homeAnimateContent = "";
-        for (var homeAnimateLength = 0; homeAnimateLength < 200; homeAnimateLength++) {
-            homeAnimateContent += '<div class="tri"></div>';
-        }
+        // var homeAnimateContent = "";
+        // for (var homeAnimateLength = 0; homeAnimateLength < 200; homeAnimateLength++) {
+        //     homeAnimateContent += '<div class="tri"></div>';
+        // }
 
-        $(".wrap").html(homeAnimateContent);
+        // $(".wrap").html(homeAnimateContent);
 
         // --------------------------------------------------------------------------------
 
@@ -1293,6 +1325,43 @@
 
         // --------------------------------------------------------------------------------
 
+        function requestMyCV() {
+            var modal = document.getElementById("requestCVModal");
+            modal.style.display = "block";
+        }
+
+        document.getElementById("requestCVModalClose").onclick = function() {
+          document.getElementById("requestCVModal").style.display = "none";
+        }
+
+        function sendRequestCV(evt, form) {
+            
+            evt.preventDefault();
+            var remail = document.getElementById("remail").value;
+            var rmessage = document.getElementById("rmessage").value;
+            // alert("NOT AVAILABLE RIGHT NOW.");
+
+            var templateParams = {
+                email: remail,
+                message: rmessage
+            };
+
+            $("#rmcv-btn").removeClass('fa-send');
+            $("#rmcv-btn").addClass('fa-spinner fa-spin');
+             
+            emailjs.send('service_wx34j79', 'template_ekndomq', templateParams)
+            .then(function(response) {
+               $("#remail").val("");
+               $("#rmessage").val("");
+               modal.style.display = "none";
+               toastr.success('Your request was successfully sent.', '');
+            }, function(error) {
+               toastr.error('Unable to send request right now.', '');
+            });
+        }
+
+        // --------------------------------------------------------------------------------
+
         // goto top
         mybutton = document.getElementById("back-to-top-wrapper");
 
@@ -1347,6 +1416,10 @@
         window.onclick = function(event) {
           if (event.target == document.getElementById("certificateModal")) {
             document.getElementById("certificateModal").style.display = "none";
+          }
+
+          if (event.target == document.getElementById("requestCVModal")) {
+            document.getElementById("requestCVModal").style.display = "none";
           }
         }
 
