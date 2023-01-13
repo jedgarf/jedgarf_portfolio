@@ -234,7 +234,7 @@
                         <p style="text-align: justify;">Apart from coding, some other activities that I love to do!</p>
                         <ul>
                             <li>Playing FPS Games</li>
-                            <li>Watching English Movies</li>
+                            <li>Watching Movies</li>
                             <li>Practicing Playing Piano</li>
                             <!-- <li>Travelling</li> -->
                         </ul>
@@ -431,10 +431,10 @@
                     <div class="tabset">
                         <!-- Tab 1 -->
                         <input type="radio" name="tabset" id="tab1" aria-controls="wesupportinc_projects" checked>
-                        <label for="tab1">WeSupport Inc.</label>
+                        <label for="tab1">WeSupport Incorporated</label>
                         <!-- Tab 2 -->
                         <input type="radio" name="tabset" id="tab2" aria-controls="serviciofilipinotinc_projects">
-                        <label for="tab2">Servicio Filipino Inc.</label>
+                        <label for="tab2">Servicio Filipino Incorporated</label>
                         <!-- Tab 3 -->
                         <input type="radio" name="tabset" id="tab3" aria-controls="other_projects">
                         <label for="tab3">Others</label>
@@ -718,7 +718,7 @@
                               <div class="timeline-panel animated slideInLeft">
                                 <div class="timeline-heading">
                                   <h4 class="timeline-title">PHP Programmer JG5</h4>
-                                  <a href="https://wesupportinc.com/main/" target="_blank"><h5 class="timeline-title"><img src="images/wsi.jpg" width="18px" style="margin-top: -8px;"> WeSupport Inc.</h5></a>
+                                  <a href="https://wesupportinc.com/main/" target="_blank"><h5 class="timeline-title"><img src="images/wsi.jpg" width="18px" style="margin-top: -8px;"> WeSupport Incorporated</h5></a>
                                   <p><small class="text-muted"><i class="fa fa-clock-o"></i> April 2022 - Present</small></p>
                                 </div>
                                 <div class="timeline-body" style="text-align: left; font-weight: normal;" hidden>
@@ -739,7 +739,7 @@
                               <div class="timeline-panel animated slideInLeft">
                                 <div class="timeline-heading">
                                   <h4 class="timeline-title">PHP Programmer JG1</h4>
-                                  <a href="https://wesupportinc.com/main/" target="_blank"><h5 class="timeline-title"><img src="images/wsi.jpg" width="18px" style="margin-top: -8px;"> WeSupport Inc.</h5></a>
+                                  <a href="https://wesupportinc.com/main/" target="_blank"><h5 class="timeline-title"><img src="images/wsi.jpg" width="18px" style="margin-top: -8px;"> WeSupport Incorporated</h5></a>
                                   <p><small class="text-muted"><i class="fa fa-clock-o"></i> Nov. 2019 - April 2022</small></p>
                                 </div>
                                 <div class="timeline-body" style="text-align: left; font-weight: normal;" hidden>
@@ -758,7 +758,7 @@
                               <div class="timeline-panel animated slideInRight">
                                 <div class="timeline-heading">
                                   <h4 class="timeline-title">Junior PHP Developer</h4>
-                                  <a href="https://www2.serviciofilipino.com/" target="_blank"><h5 class="timeline-title"><img src="images/sfi_logo.png" width="18px" style="margin-top: -8px;"> Servicio Filipino Inc.</h5></a>
+                                  <a href="https://www2.serviciofilipino.com/" target="_blank"><h5 class="timeline-title"><img src="images/sfi_logo.png" width="18px" style="margin-top: -8px;"> Servicio Filipino Incorporated</h5></a>
                                   <p><small class="text-muted"><i class="fa fa-clock-o"></i> Oct. 2018 - Nov. 2019</small></p>
                                 </div>
                                 <div class="timeline-body" style="text-align: left; font-weight: normal;" hidden>
@@ -1224,6 +1224,8 @@
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
 
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib --> <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+
     <!-- toastr -->
     <script src="js/toastr/toastr.js"></script>
 
@@ -1466,6 +1468,8 @@
             modal.style.display = "block";
 
         }
+
+        // particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
     </script>
 
 </body>
