@@ -3,7 +3,7 @@
 }
  #home {
 	 background-color: black;
-	 background-image: radial-gradient(circle at right, black 10%, gray 100%);
+	 background-image: radial-gradient(circle at right, #6b87db 100%, gray 10%);
 }
 
 .wrap {
