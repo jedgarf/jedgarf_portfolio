@@ -10,6 +10,7 @@
     <meta name="keywords" content="">
     <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" type="image/x-icon" href="images/jefdev_projects_transparent.png">
 
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
@@ -38,6 +39,80 @@
     <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
 
     <link rel="stylesheet" type="text/css" href="css/custom_style2.css" />
+
+    <style type="text/css">
+        
+    /* The Modal (background) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed; /* Stay in place */
+      z-index: 2000; /* Sit on top */
+      padding-top: 100px; /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+      overflow: auto; /* Enable scroll if needed */
+      background-color: rgb(0,0,0); /* Fallback color */
+      background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+      position: relative;
+      background-color: #fefefe;
+      margin: auto;
+      padding: 0;
+      border: 1px solid #888;
+      width: 80%;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+      -webkit-animation-name: animatetop;
+      -webkit-animation-duration: 0.4s;
+      animation-name: animatetop;
+      animation-duration: 0.4s
+    }
+
+    /* Add Animation */
+    @-webkit-keyframes animatetop {
+      from {top:-300px; opacity:0} 
+      to {top:0; opacity:1}
+    }
+
+    @keyframes animatetop {
+      from {top:-300px; opacity:0}
+      to {top:0; opacity:1}
+    }
+
+    /* The Close Button */
+    .close {
+      color: white;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .modal-header {
+      padding: 2px 16px;
+      /*background-color: #5cb85c;*/
+      /*color: white;*/
+    }
+
+    .modal-body {padding: 20px 20px;}
+
+    .modal-footer {
+      padding: 2px 16px;
+      /*background-color: #5cb85c;*/
+      /*color: white;*/
+    }
+
+    </style>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-01SMNF2LZY"></script>
@@ -68,6 +143,7 @@
         </div>
     </section>
 
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
     <!-- MENU -->
     <section id="top" class="navbar custom-navbar navbar-fixed-top" role="navigation">
@@ -89,16 +165,16 @@
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-nav-first">
                     <li><a href="#home" class="smoothScroll">Home</a></li>
-                    <li><a href="#about" class="smoothScroll">About</a></li>
+                    <li><a href="#about" class="smoothScroll">About Me</a></li>
                     <li><a href="#skills" class="smoothScroll">Skills</a></li>
-                    <li><a href="#work_experiences" class="smoothScroll">Professional Experiences</a></li>
                     <li><a href="#projects" class="smoothScroll">Projects</a></li>
-                    <li><a href="#educations" class="smoothScroll">Educations</a></li>
+                    <li><a href="#work_experiences" class="smoothScroll">Professional Experiences</a></li>
+                    <!-- <li><a href="#educations" class="smoothScroll">Educations</a></li> -->
                     <li><a href="#achievements_seminars" class="smoothScroll">Certifications</a></li>
-                    <li><a href="#contact" class="smoothScroll">Contacts</a></li>
+                    <li><a href="#contact" class="smoothScroll">Get In Touch</a></li>
                 </ul>
 
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right" hidden>
                     <li><a href="https://facebook.com/jedgarf" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
                     <!-- <li><a href="#"><i class="fa fa-instagram"></i></a></li> -->
                     <li><a href="https://www.linkedin.com/in/jedgarf" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
@@ -109,6 +185,7 @@
         </div>
     </section>
 
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
     <!-- HOME -->
     <section id="home" data-stellar-background-ratio="0.5">
@@ -123,11 +200,11 @@
 
                 <div class="col-md-6 col-sm-12 cd-intro">
                     <div class="home-info cd-intro-content bouncy" style="margin-bottom: 90px !important;">
-                        <h1 style="font-size: 50px; font-weight: bolder;">Hello 👋.</h1>
-                        <h1 style="font-size: 23px; font-weight: bolder;">I'm <b class="typed-element"></b></h1>
+                        <h1 style="font-size: 50px; font-weight: bolder; color: #5cb85c;">Hello 👋.</h1>
+                        <h1 style="font-size: 23px; font-weight: bolder; color: #d9534f;">I'm <b class="typed-element" style="color: #0275d8;"></b></h1>
                         <div class="action-wrapper">
                             <a href="#projects" class="btn section-btn smoothScroll cd-btn main-action"><i class="fa fa-code"></i> Projects</a>
-                            <a href="#contact" class="btn section-btn smoothScroll cd-btn"><i class="fa fa-envelope"></i> Get In Touch</a>
+                            <a href="#contact" class="btn section-btn smoothScroll cd-btn"><i class="fa fa-briefcase"></i> Get In Touch</a>
                         </div>
                     </div>
                 </div>
@@ -139,6 +216,7 @@
         </div>
     </section>
 
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
     <!-- ABOUT -->
     <section id="about" class="show-on-scroll" data-stellar-background-ratio="0.5" style="margin-bottom: 100px;">
@@ -152,12 +230,12 @@
                             <span class="line-bar">...</span>
                         </div>
                         <!-- <p style="text-align: justify;">I have solid experience as PHP Full Stack Programmer/Developer in analysis, design, development, and management of web on windows based software application using HTML5, CSS3/Bootstrap, Javascript/Ajax/JQuery/ReactJS, MySQL/PostgreSQL and API (PHP based Environment).</p> -->
-                        <p style="text-align: justify;">Hi There! I'm <b>John Edgar Jr. Francisco</b>. A <b>Full Stack Developer</b> having specialization in <b>Frontend and Backend Development</b>. I have 4 years of working experience in <b>Full Stack Development</b> having strong PHP skills. I have backend skills in <b>Codeigniter, Yii 1.1, Laravel and Django</b> and I also have frontend skills in <b>HTML5, CSS3, Bootstrap, Javascript, Jquery, ReactJS and Flutter for Mobile Application Development</b>, aside from my software development skills, I also practicing some DevOps skills like <b>Docker and Linux based Server Management</b>.</p>
+                        <p style="text-align: justify;">Hi There! I'm <b>John Edgar Jr. Francisco</b>. A <b>Full Stack Developer</b> having specialization in <b>Frontend and Backend Development</b>. I have 4 years of working experience in <b>Full Stack Development</b> having strong PHP skills. I have backend skills in <b>Codeigniter, Yii 1.1, Laravel/Lumen and NodeJS(ExpressJS)</b> and I also have frontend skills in <b>HTML5, CSS3, Bootstrap, Javascript, Jquery and ReactJS</b>, aside from my software development skills, I also practicing Mobile App Development using <b>Flutter</b>.</p>
 
                         <p style="text-align: justify;">Apart from coding, some other activities that I love to do!</p>
                         <ul>
                             <li>Playing FPS Games</li>
-                            <li>Watching English Movies</li>
+                            <li>Watching Movies</li>
                             <li>Practicing Playing Piano</li>
                             <!-- <li>Travelling</li> -->
                         </ul>
@@ -165,6 +243,34 @@
                 </div>
 
                 <div class="col-md-6 col-sm-12 svg2"> 
+                </div>
+
+
+                <div class="col-md-12 col-sm-12" style="margin-top: 100px;">
+                    <div class="section-title">
+                        <h2>Degree Received</h2>
+                        <span class="line-bar">...</span>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 col-sm-12 neust-rotate" style="margin-bottom: 20px;">
+                            <center>
+                                <img src="images/neust.png" width="160px">
+                            </center>
+                        </div>
+                        <div class="col-md-9 col-sm-12">
+                            <div class="panel panel-primary text-left">
+                                <div class="panel-heading">
+                                    <b><big>Nueva Ecija University of Science and Technology</big><small class="pull-right">2014-2018</small><br>
+                                    <small>Bachelor of Science in Information Technology</small>
+                                    </b>
+                                </div>
+                                <div class="panel-body">
+                                   ⚡ Specialization in Database Applications Programming<br><br>
+                                   <a href="https://neust.edu.ph/" target="_blank"><button class="btn btn-danger btn-sm pull-right">Visit Website</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- <div class="col-md-4 col-sm-12">
@@ -178,6 +284,8 @@
             </div>
         </div>
     </section>
+
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
     <!-- Skills -->
     <section id="skills" data-stellar-background-ratio="0.5">
@@ -197,77 +305,83 @@
 
                     <!-- icons -->
                     <div class="row">
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column">
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-html5-plain-wordmark colored" title="HTML5"></i>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column">
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-css3-plain-wordmark colored" title="CSS3"></i>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column">
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-javascript-plain colored" title="Javascript"></i>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column">
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-php-plain colored" title="PHP"></i>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column">
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-composer-line-wordmark colored" title="Composer"></i>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column">
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-npm-original-wordmark colored" title="NPM"></i>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column">
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-codeigniter-plain-wordmark colored" title="Codeigniter"></i>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column">
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-laravel-plain-wordmark colored" title="Laravel"></i>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column">
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-yii-plain-wordmark colored" title="Yii 1.1"></i>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column">
+                        <!-- <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-django-plain-wordmark colored" title="Django"></i>
-                        </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column">
+                        </div> -->
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-nodejs-plain-wordmark colored" title="NodeJS"></i>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column">
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-flutter-plain colored" title="Flutter"></i>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column">
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-bootstrap-plain-wordmark colored" title="Bootstrap"></i>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column">
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-jquery-plain-wordmark colored" title="JQuery"></i>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column">
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-git-plain-wordmark colored" title="Git"></i>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column">
-                            <i class="devicon-devicon devicon-linux-plain colored" title="Linux Command"></i>
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
+                            <i class="devicon-devicon devicon-linux-plain colored" title="Linux Commands"></i>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column">
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-apache-plain-wordmark colored" title="Apache"></i>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column">
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-docker-plain-wordmark colored" title="Docker"></i>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column">
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-react-original-wordmark colored" title="ReactJS"></i>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column">
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-mysql-plain-wordmark colored" title="MySQL"></i>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column">
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-postgresql-plain-wordmark colored" title="PostgreSQL"></i>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column">
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-mongodb-plain-wordmark colored" title="MongoDB"></i>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column">
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-github-original-wordmark colored" title="GitHub"></i>
                         </div>
-                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column">
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
                             <i class="devicon-devicon devicon-bitbucket-original-wordmark colored" title="Bitbucket"></i>
+                        </div>
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
+                            <i class="devicon-devicon devicon-express-original-wordmark colored" title="Express JS"></i>
+                        </div>
+                        <div class="col-md-2 col-sm-3 col-xs-4 divicon-divicon-column zoom">
+                            <i class="devicon-devicon devicon-putty-plain colored" title="Putty"></i>
                         </div>
                     </div>
 
@@ -280,11 +394,14 @@
                         </div> -->
                         <ul style="font-weight: normal;">
                             <!-- <li style="margin-bottom: 20px;">Develop highly interactive Front end / User Interfaces for your web and mobile applications.</li> -->
-                            <li style="margin-bottom: 20px;">Creating application backend in CodeIgniter, Yii 1.1, Laravel, Lumen & Django.</li>
+                            <li style="margin-bottom: 20px;">Creating application backend in CodeIgniter, Yii 1.1, Laravel/Lumen and NodeJS(ExpressJS).</li>
+                            <li style="margin-bottom: 20px;">Developing REST API with JWT (JSON Web Token).</li>
+                            <li style="margin-bottom: 20px;">Knowledgeable in JavaScript Libraries like JQuery and ReactJS.</li>
                             <li style="margin-bottom: 20px;">Building responsive web pages using Bootstrap.</li>
                             <li style="margin-bottom: 20px;">Developing mobile applications using Flutter.</li>
-                            <li style="margin-bottom: 20px;">Developing RESTful API with JWT Authentication.</li>
                             <li style="margin-bottom: 20px;">Experience hosting and managing websites.</li>
+                            <li style="margin-bottom: 20px;">Database Design and Administration.</li>
+                            <li style="margin-bottom: 20px;">MySQL Functions, Triggers and Stored Procedures.</li>
                             <li style="margin-bottom: 20px;">Understanding in Object Oriented Programming Concepts.</li>
                             <li style="margin-bottom: 20px;">Understanding in Agile/Scrum Software Development Life Cycle.</li>
                         </ul>
@@ -295,90 +412,7 @@
         </div>
     </section>
 
-    <!-- Working Experience -->
-    <section id="work_experiences" data-stellar-background-ratio="0.5">
-        <div class="container reveal">
-            <div class="row">
-
-                <div class="col-md-12 col-sm-12">
-                    <div class="section-title">
-                        <h2>Professional Experiences</h2>
-                        <span class="line-bar">...</span>
-                    </div>
-                </div>
-
-                <div class="col-md-12 col-sm-12">
-
-                    <div class="container">
-                        <ul class="timeline">
-                            <li>
-                              <div class="timeline-badge primary"><i class="fa fa-briefcase"></i></div>
-                              <div class="timeline-panel animated slideInLeft">
-                                <div class="timeline-heading">
-                                  <h4 class="timeline-title">PHP Programmer JG5</h4>
-                                  <a href="https://wesupportinc.com/main/" target="_blank"><h5 class="timeline-title"><img src="images/wsi.jpg" width="18px" style="margin-top: -8px;"> WeSupport Inc.</h5></a>
-                                  <p><small class="text-muted"><i class="fa fa-clock-o"></i> April 2022 - Present</small></p>
-                                </div>
-                                <div class="timeline-body" style="text-align: left; font-weight: normal;" hidden>
-                                  <ul>
-                                      <li>Worked as part of software development teams in the design, development, and support of both new and existing software products and systems; reporting status, monitoring issues/problems and recommending action plans.</li>
-                                      <li>Configured Google analytics module for tracking the visitors for the website.</li>
-                                      <li>Used Ajax for every page for dynamically displaying the data without a page refresh.</li>
-                                      <li>Developed and maintained functions, procedures, triggers, indexes using MySQL database programming language.</li>
-                                      <li>Identifying and solving issues caused by plugins or feeds under PHP, MySQL, HTML, CSS, Javascript and Jquery technology.</li>
-                                      <li>Administrate and maintain Linux Server in multiple projects.</li>
-                                      <li>Implementing Flutter for Mobile Application Development.</li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </li>
-                            <li>
-                              <div class="timeline-badge warning"><i class="fa fa-briefcase"></i></div>
-                              <div class="timeline-panel animated slideInLeft">
-                                <div class="timeline-heading">
-                                  <h4 class="timeline-title">PHP Programmer JG1</h4>
-                                  <a href="https://wesupportinc.com/main/" target="_blank"><h5 class="timeline-title"><img src="images/wsi.jpg" width="18px" style="margin-top: -8px;"> WeSupport Inc.</h5></a>
-                                  <p><small class="text-muted"><i class="fa fa-clock-o"></i> Nov. 2019 - April 2022</small></p>
-                                </div>
-                                <div class="timeline-body" style="text-align: left; font-weight: normal;" hidden>
-                                  <ul>
-                                      <li>Worked as part of software development teams in the design, development, and support of both new and existing software products and systems; reporting status, monitoring issues/problems and recommending action plans.</li>
-                                      <li>Configured Google analytics module for tracking the visitors for the website.</li>
-                                      <li>Used Ajax for every page for dynamically displaying the data without a page refresh.</li>
-                                      <li>Developed and maintained functions, procedures, triggers, indexes using MySQL database programming language.</li>
-                                      <li>Identifying and solving issues caused by plugins or feeds under PHP, MySQL, HTML, CSS, Javascript and Jquery technology.</li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </li>
-                            <li class="timeline-inverted">
-                              <div class="timeline-badge"><i class="fa fa-briefcase"></i></div>
-                              <div class="timeline-panel animated slideInRight">
-                                <div class="timeline-heading">
-                                  <h4 class="timeline-title">Junior PHP Developer</h4>
-                                  <a href="https://www2.serviciofilipino.com/" target="_blank"><h5 class="timeline-title"><img src="images/sfi_logo.png" width="18px" style="margin-top: -8px;"> Servicio Filipino Inc.</h5></a>
-                                  <p><small class="text-muted"><i class="fa fa-clock-o"></i> Oct. 2018 - Nov. 2019</small></p>
-                                </div>
-                                <div class="timeline-body" style="text-align: left; font-weight: normal;" hidden>
-                                    <ul>
-                                        <li>Became part of the development team of COGO ERP Systems.<br>
-                                            <ul>
-                                                <li>Talent Management System</li>
-                                                <li>Billing System</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </div>
-                              </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </section>
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
     <!-- Projects -->
     <section id="projects" data-stellar-background-ratio="0.5">
@@ -411,237 +445,242 @@
                                 <h2 hidden>Will be posted soon.</h2>
                                 <div class="row">
 
-                                    <!-- <div class="col-md-4 col-sm-6 col-xs-12">
-                                        <div class="flip-card">
-                                          <div class="flip-card-inner">
-                                            <div class="flip-card-front">
-                                              <img src="images/theme_oilhome.jpg" alt="Avatar" style="width:350px;height:350px;">
-                                            </div>
-                                            <div class="flip-card-back">
-                                              <span style="margin-bottom: 20px;">CodeIgniter 3 / MySQL / JQuery</span>
-                                                        <span><b>Name:</b><br>Obelisk Interlinked Learners' H.O.M.E.</span>
-                                                        <span><b>Description:</b><br>E-School ERP System</span>
-                                                        <span><b>PHP Framework:</b><br>Codeigniter 3</span>
-                                                        <span><b>Link URL:</b><br><a href="https://oilhomeschool.org/" target="_blank" style="color: blue; text-decoration-line: underline !important;">https://oilhomeschool.org</a></span>
-                                            </div>
-                                          </div>
-                                        </div>
-                                    </div> -->
-
-                                    <div class="col-md-4 col-sm-6 col-sm-6">
+                                    <div class="col-md-4 col-sm-6 col-xm-12 card-zoomx">
                                         <div class="panel panel-default project_panel">
                                             <div class="panel-heading content_img">
                                               <img src="images/theme_oilhome.jpg" alt="" class="img-responsive center-block" style="height: 230px;" />
-                                              <div onclick="openModal();currentSlide(1)"><i class="fa fa-photo"></i> See Photos</div>
+                                              <!-- <div onclick="openModal();currentSlide(1)"><i class="fa fa-photo"></i> See Photos</div> -->
                                             </div>
                                             <div class="panel-body">
                                               <h5><b>Obelisk Interlinked Learners' H.O.M.E.</b></h5>
-                                              <!-- <small>Central Luzon Youth Congress on Information Technology</small><br> -->
+                                              <small>School Management System</small><br><br>
                                               <div class="text-center">
                                                   <span class="btag btag-teal">CodeIgniter 3 / MySQL / JQuery</span><br>
-                                                    <!-- <span><b>Description:</b><br>E-School ERP System</span> -->
-                                                    <!-- <span><b>PHP Framework:</b><br>Codeigniter 3</span> -->
-                                                    <!-- <span><b>Link URL:</b><br><a href="https://oilhomeschool.org/" target="_blank" style="color: blue; text-decoration-line: underline !important;">https://oilhomeschool.org</a></span> -->
-                                                    <!-- <button class="btn btn-primary" style="border-radius: 10px; margin-top: 20px;"> More Details</button> -->
                                               </div>
                                             </div>
                                             <div class="panel-footer">
-                                                <a href="https://oilhomeschool.org/" target="_blank"><button class="btn btn-primary btn-sm">Visit</button></a>
+                                                <!-- <a href="javascript:void(0)"><button class="btn btn-danger btn-sm disabled"><i class="fa fa-folder-open"></i> Repository</button></a> -->
+                                                <a href="https://oilhomeschool.org/" target="_blank"><button class="btn btn-primary btn-sm"><i class="fa fa-tv"></i> Visit</button></a>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="col-md-4 col-sm-6 col-xs-12">
-                                        <center>
-                                            <div class="bcontainer">
-                                                <div class="bcard">
-                                                    <div class="bcard-header">
-                                                        <!-- <img src="images/theme_oilhome.jpg" alt="rover" /> -->
-                                                        <div class="content_img">
-                                                            <img src="images/theme_oilhome.jpg" style="width:100%" class="hover-shadow">
-                                                            <div onclick="openModal();currentSlide(1)"><i class="fa fa-photo"></i> See Photos</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="bcard-body text-left" style="height: 300px;">
-                                                        <span class="btag btag-teal" style="margin-bottom: 20px;">CodeIgniter 3 / MySQL / JQuery</span>
-                                                        <span><b>Name:</b><br>Obelisk Interlinked Learners' H.O.M.E.</span>
-                                                        <span><b>Description:</b><br>E-School ERP System</span>
-                                                        <span><b>PHP Framework:</b><br>Codeigniter 3</span>
-                                                        <span><b>Link URL:</b><br><a href="https://oilhomeschool.org/" target="_blank" style="color: blue; text-decoration-line: underline !important;">https://oilhomeschool.org</a></span>
-                                                        <!-- <button class="btn btn-primary" style="border-radius: 10px; margin-top: 20px;"> More Details</button> -->
-                                                    </div>
-                                                </div>
+                                    <div class="col-md-4 col-sm-6 col-xm-12 card-zoomx">
+                                        <div class="panel panel-default project_panel">
+                                            <div class="panel-heading content_img">
+                                              <img src="images/coachfirst_logo.png" alt="" class="img-responsive center-block" style="height: 230px;" />
+                                              <!-- <div onclick="openModal();currentSlide(1)"><i class="fa fa-photo"></i> See Photos</div> -->
                                             </div>
-                                        </center>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 col-xs-12" style="justify-content: center">
-                                        <center>
-                                            <div class="bcontainer">
-                                                <div class="bcard">
-                                                    <div class="bcard-header">
-                                                        <img src="images/coachfirst_logo.png" alt="rover" />
-                                                        <!-- <img src="images/coachfirst_logo.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"> -->
-                                                    </div>
-                                                    <div class="bcard-body text-left" style="height: 300px;">
-                                                        <span class="btag btag-teal" style="margin-bottom: 20px;">CodeIgniter 4 / MySQL / JQuery</span>
-                                                        <span><b>Name:</b><br> CoachFirst</span>
-                                                        <span><b>Description:</b><br>Sport Coach Appointment System</span>
-                                                        <span><b>PHP Framework:</b><br>Codeigniter 4</span>
-                                                        <span><b>Link URL:</b><br><a href="https://coachfirst.sg" target="_blank" style="color: blue; text-decoration-line: underline !important;">https://coachfirst.sg</a></span>
-                                                        <!-- <button class="btn btn-primary" style="border-radius: 10px; margin-top: 20px;"> More Details</button> -->
-                                                    </div>
-                                                </div>
+                                            <div class="panel-body">
+                                              <h5><b>CoachFirst</b></h5>
+                                              <small>Sport Coaches Booking System (Singapore)</small><br><br>
+                                              <div class="text-center">
+                                                  <span class="btag btag-teal">CodeIgniter 4 / MySQL / JQuery</span><br>
+                                              </div>
                                             </div>
-                                        </center>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 col-xs-12" style="justify-content: center">
-                                        <center>
-                                            <div class="bcontainer">
-                                                <div class="bcard">
-                                                    <div class="bcard-header">
-                                                        <img src="images/superaire_logo.png" alt="rover" />
-                                                    </div>
-                                                    <div class="bcard-body text-left" style="height: 300px;">
-                                                        <span class="btag btag-teal" style="margin-bottom: 20px;">CodeIgniter 3 / JQuery</span>
-                                                        <span><b>Name:</b><br>SUPER-AIRE</span>
-                                                        <span><b>Description:</b><br>Static Website</span>
-                                                        <span><b>PHP Framework:</b><br>Codeigniter 3</span>
-                                                        <span><b>Link URL:</b><br><a href="https://superaire.ph/" target="_blank" style="color: blue; text-decoration-line: underline !important;">https://superaire.ph/</a></span>
-                                                        <!-- <button class="btn btn-primary" style="border-radius: 10px; margin-top: 20px;"> More Details</button> -->
-                                                    </div>
-                                                </div>
+                                            <div class="panel-footer">
+                                                <!-- <a href="javascript:void(0)"><button class="btn btn-danger btn-sm disabled"><i class="fa fa-folder-open"></i> Repository</button></a> -->
+                                                <a href="https://coachfirst.sg" target="_blank"><button class="btn btn-primary btn-sm"><i class="fa fa-tv"></i> Visit</button></a>
                                             </div>
-                                        </center>
+                                        </div>
                                     </div>
-                                    <div class="col-md-4 col-sm-6 col-xs-12" style="justify-content: center">
-                                        <center>
-                                            <div class="bcontainer">
-                                                <div class="bcard">
-                                                    <div class="bcard-header">
-                                                        <img src="images/acms.png" alt="rover" />
-                                                    </div>
-                                                    <div class="bcard-body text-left" style="height: 300px;">
-                                                        <span class="btag btag-teal" style="margin-bottom: 20px;">Laravel / MySQL / JQuery / Mapbox API</span>
-                                                        <span><b>Name:</b><br>Automated Campaign Management System (ACMS)</span>
-                                                        <span><b>Description:</b><br>N/A</span>
-                                                        <span><b>PHP Framework:</b><br>Laravel</span>
-                                                        <span><b>Link URL:</b><br>Under Development</span>
-                                                        <!-- <button class="btn btn-primary" style="border-radius: 10px; margin-top: 20px;"> More Details</button> -->
-                                                    </div>
-                                                </div>
+
+                                    <div class="col-md-4 col-sm-6 col-xm-12 card-zoomx">
+                                        <div class="panel panel-default project_panel">
+                                            <div class="panel-heading content_img">
+                                              <img src="images/superaire_logo.png" alt="" class="img-responsive center-block" style="height: 230px;" />
+                                              <!-- <div onclick="openModal();currentSlide(1)"><i class="fa fa-photo"></i> See Photos</div> -->
                                             </div>
-                                        </center>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 col-xs-12" style="justify-content: center">
-                                        <center>
-                                            <div class="bcontainer">
-                                                <div class="bcard">
-                                                    <div class="bcard-header">
-                                                        <img src="images/wsi.jpg" alt="rover" />
-                                                    </div>
-                                                    <div class="bcard-body text-left" style="height: 300px;">
-                                                        <span class="btag btag-teal" style="margin-bottom: 20px;">Smarty PHP Template Engine / Pure PHP / MySQL / JQuery</span>
-                                                        <span><b>Name:</b><br>WSI Resume Builder</span>
-                                                        <span><b>Description:</b><br>Resume Builder System</span>
-                                                        <span><b>PHP Framework:</b><br>Pure PHP</span>
-                                                        <span><b>Link URL:</b><br>Under Development</span>
-                                                        <!-- <button class="btn btn-primary" style="border-radius: 10px; margin-top: 20px;"> More Details</button> -->
-                                                    </div>
-                                                </div>
+                                            <div class="panel-body">
+                                              <h5><b>SUPER-AIRE</b></h5>
+                                              <small>Company Website</small><br><br>
+                                              <div class="text-center">
+                                                  <span class="btag btag-teal">CodeIgniter 3 / JQuery</span><br>
+                                              </div>
                                             </div>
-                                        </center>
+                                            <div class="panel-footer">
+                                                <!-- <a href="javascript:void(0)"><button class="btn btn-danger btn-sm disabled"><i class="fa fa-folder-open"></i> Repository</button></a> -->
+                                                <a href="https://super-aire.com.ph/" target="_blank"><button class="btn btn-primary btn-sm"><i class="fa fa-tv"></i> Visit</button></a>
+                                                <!-- <a href="javascript:void(0)"><button class="btn btn-primary btn-sm disabled"><i class="fa fa-tv"></i> Visit</button></a> -->
+                                            </div>
+                                        </div>
                                     </div>
+
+                                    <div class="col-md-4 col-sm-6 col-xm-12 card-zoomx">
+                                        <div class="panel panel-default project_panel">
+                                            <div class="panel-heading content_img">
+                                              <img src="images/acms.png" alt="" class="img-responsive center-block" style="height: 230px;" />
+                                              <!-- <div onclick="openModal();currentSlide(1)"><i class="fa fa-photo"></i> See Photos</div> -->
+                                            </div>
+                                            <div class="panel-body">
+                                              <h5 style="font-size: 13px;"><b>Automated Campaign Management System (ACMS)</b></h5>
+                                              <small>Campaign Management System</small><br><br>
+                                              <div class="text-center">
+                                                  <span class="btag btag-teal">Laravel / MySQL / JQuery / Mapbox API</span><br>
+                                              </div>
+                                            </div>
+                                            <div class="panel-footer">
+                                                <!-- <a href="javascript:void(0)"><button class="btn btn-danger btn-sm disabled"><i class="fa fa-folder-open"></i> Repository</button></a> -->
+                                                <a href="https://acms.ph/" target="_blank"><button class="btn btn-primary btn-sm"><i class="fa fa-tv"></i> Visit</button></a>
+                                                <!-- <a href="javascript:void(0)"><button class="btn btn-primary btn-sm disabled"><i class="fa fa-tv"></i> Visit</button></a> -->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 col-sm-6 col-xm-12 card-zoomx">
+                                        <div class="panel panel-default project_panel">
+                                            <div class="panel-heading content_img">
+                                              <img src="images/wsi_resume_builder_logo.png" alt="" class="img-responsive center-block" style="height: 230px;" />
+                                              <!-- <div onclick="openModal();currentSlide(1)"><i class="fa fa-photo"></i> See Photos</div> -->
+                                            </div>
+                                            <div class="panel-body">
+                                              <h5><b>WSI Resume Builder</b></h5>
+                                              <small>Resume Builder System</small><br><br>
+                                              <div class="text-center">
+                                                  <span class="btag btag-teal" style="font-size: 9px;">Smarty PHP Template Engine / Core PHP / MySQL / JQuery</span><br>
+                                              </div>
+                                            </div>
+                                            <div class="panel-footer">
+                                                <!-- <a href="javascript:void(0)"><button class="btn btn-danger btn-sm disabled"><i class="fa fa-folder-open"></i> Repository</button></a> -->
+                                                <a href="https://rb.wesupportinc.com/listing" target="_blank"><button class="btn btn-primary btn-sm"><i class="fa fa-tv"></i> Visit</button></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 col-sm-6 col-xm-12 card-zoomx">
+                                        <div class="panel panel-default project_panel">
+                                            <div class="panel-heading content_img">
+                                              <img src="images/ekkremis_logo.png" alt="" class="img-responsive center-block" style="height: 230px;" />
+                                              <!-- <div onclick="openModal();currentSlide(1)"><i class="fa fa-photo"></i> See Photos</div> -->
+                                            </div>
+                                            <div class="panel-body">
+                                              <h5><b>EKKREMIS SOLUTIONS COMPANY LIMITED THAILAND</b></h5>
+                                              <small>Company Website</small><br><br>
+                                              <div class="text-center">
+                                                  <span class="btag btag-teal">HTML5 / CSS3 / JavaScript / JQuery</span><br>
+                                              </div>
+                                            </div>
+                                            <div class="panel-footer">
+                                                <!-- <a href="javascript:void(0)"><button class="btn btn-danger btn-sm disabled"><i class="fa fa-folder-open"></i> Repository</button></a> -->
+                                                <a href="https://ekkremis-co.ltd/" target="_blank"><button class="btn btn-primary btn-sm"><i class="fa fa-tv"></i> Visit</button></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 col-sm-6 col-xm-12 card-zoomx">
+                                        <div class="panel panel-default project_panel">
+                                            <div class="panel-heading content_img">
+                                              <img src="images/tranzend.png" alt="" class="img-responsive center-block" style="height: 230px;" />
+                                              <!-- <div onclick="openModal();currentSlide(1)"><i class="fa fa-photo"></i> See Photos</div> -->
+                                            </div>
+                                            <div class="panel-body">
+                                              <h5><b>TRANZEND SOLUTIONS AND TRADING CORPORATION</b></h5>
+                                              <small>Company Website</small><br><br>
+                                              <div class="text-center">
+                                                  <span class="btag btag-teal">HTML5 / CSS3 / JavaScript / JQuery</span><br>
+                                              </div>
+                                            </div>
+                                            <div class="panel-footer">
+                                                <!-- <a href="javascript:void(0)"><button class="btn btn-danger btn-sm disabled"><i class="fa fa-folder-open"></i> Repository</button></a> -->
+                                                <a href="https://tranzend.com.ph/" target="_blank"><button class="btn btn-primary btn-sm"><i class="fa fa-tv"></i> Visit</button></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 col-sm-6 col-xm-12 card-zoomx">
+                                        <div class="panel panel-default project_panel">
+                                            <div class="panel-heading content_img">
+                                              <img src="images/acms_survey.png" alt="" class="img-responsive center-block" style="height: 230px;" />
+                                              <!-- <div onclick="openModal();currentSlide(1)"><i class="fa fa-photo"></i> See Photos</div> -->
+                                            </div>
+                                            <div class="panel-body">
+                                              <h5 style="font-size: 12px;"><b>Automated Campaign Management System (ACMS) - Survey</b></h5>
+                                              <small>Survey Web Application</small><br><br>
+                                              <div class="text-center">
+                                                  <span class="btag btag-teal">ReactJS / Lumen 8</span><br>
+                                              </div>
+                                            </div>
+                                            <div class="panel-footer">
+                                                <!-- <a href="javascript:void(0)"><button class="btn btn-danger btn-sm disabled"><i class="fa fa-folder-open"></i> Repository</button></a> -->
+                                                <!-- <a href="https://survey.tranzend.com.ph/" target="_blank"><button class="btn btn-primary btn-sm"><i class="fa fa-tv"></i> Visit</button></a> -->
+                                                <a href="javascript:void(0)" title="On Progress"><button class="btn btn-primary btn-sm disabled"><i class="fa fa-tv"></i> Visit</button></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </section>
+
                             <section id="serviciofilipinotinc_projects" class="tab-panel">
                                 <h2 hidden>Will be posted soon.</h2>
                                 <div class="row">
-                                    <div class="col-md-4 col-sm-6 col-xs-12" style="justify-content: center">
-                                        <center>
-                                            <div class="bcontainer">
-                                                <div class="bcard">
-                                                    <div class="bcard-header">
-                                                        <img src="images/cogo.png" alt="rover" />
-                                                    </div>
-                                                    <div class="bcard-body text-left" style="height: 300px;">
-                                                        <span class="btag btag-teal" style="margin-bottom: 20px;">CodeIgniter 3 / MySQL / JQuery</span>
-                                                        <span><b>Name:</b><br>COGO ERP Systems</span>
-                                                        <span><b>Description:</b><br>SFI ERP Systems<br>
-                                                            <ul>
-                                                                <li>Talent Management System</li>
-                                                                <li>Billing System</li>
-                                                            </ul>
-                                                        </span>
-                                                        <span><b>PHP Framework:</b><br>Codeigniter 3</span>
-                                                        <span><b>Link URL:</b><br>Not Available</span>
-                                                        <!-- <button class="btn btn-primary" style="border-radius: 10px; margin-top: 20px;"> More Details</button> -->
-                                                    </div>
-                                                </div>
+
+                                    <div class="col-md-4 col-sm-6 col-xm-12 card-zoomx">
+                                        <div class="panel panel-default project_panel">
+                                            <div class="panel-heading content_img">
+                                              <img src="images/cogo.png" alt="" class="img-responsive center-block" style="height: 230px;" />
+                                              <!-- <div onclick="openModal();currentSlide(1)"><i class="fa fa-photo"></i> See Photos</div> -->
                                             </div>
-                                        </center>
+                                            <div class="panel-body">
+                                              <h5><b>COGO ERP Systems</b></h5>
+                                              <small>HRIS/CRM/Payroll/Billing/Timekeeping/Inventory</small><br><br>
+                                              <div class="text-center">
+                                                  <span class="btag btag-teal">CodeIgniter 3 / MySQL / JQuery</span><br>
+                                              </div>
+                                            </div>
+                                            <div class="panel-footer">
+                                                <!-- <a href="javascript:void(0)"><button class="btn btn-danger btn-sm disabled"><i class="fa fa-folder-open"></i> Repository</button></a> -->
+                                                <a href="javascript:void(0)" title="Private Repository"><button class="btn btn-primary btn-sm disabled"><i class="fa fa-tv"></i> Visit</button></a>
+                                            </div>
+                                        </div>
                                     </div>
+
                                 </div>
                             </section>
                             <section id="other_projects" class="tab-panel">
                                 <h2 hidden>Will be posted soon.</h2>
                                 <div class="row">
-                                    <div class="col-md-4 col-sm-6 col-xs-12" style="justify-content: center">
-                                        <center>
-                                            <div class="bcontainer">
-                                                <div class="bcard">
-                                                    <div class="bcard-header">
-                                                        <img src="images/neust.png" alt="rover" />
-                                                    </div>
-                                                    <div class="bcard-body text-left" style="height: 300px;">
-                                                        <span class="btag btag-teal" style="margin-bottom: 20px;">Pure PHP / MySQL / JQuery</span>
-                                                        <span><b>Name:</b><br>NEUST Local Student Council E-Voting</span>
-                                                        <span><b>Description:</b><br>LAN Based E-Voting System (Capstone Project/College Thesis)</span>
-                                                        <span><b>PHP Framework:</b><br>Core PHP</span>
-                                                        <span><b>Link URL:</b><br>Not Available</span>
-                                                        <!-- <button class="btn btn-primary" style="border-radius: 10px; margin-top: 20px;"> More Details</button> -->
-                                                    </div>
-                                                </div>
+
+                                    <div class="col-md-4 col-sm-6 col-xm-12 card-zoomx">
+                                        <div class="panel panel-default project_panel">
+                                            <div class="panel-heading content_img">
+                                              <img src="images/neust.png" alt="" class="img-responsive center-block" style="height: 230px;" />
+                                              <!-- <div onclick="openModal();currentSlide(1)"><i class="fa fa-photo"></i> See Photos</div> -->
                                             </div>
-                                        </center>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 col-xs-12" style="justify-content: center">
-                                        <center>
-                                            <div class="bcontainer">
-                                                <div class="bcard">
-                                                    <div class="bcard-header">
-                                                        <img src="images/jefdev_projects.png" alt="rover" />
-                                                    </div>
-                                                    <div class="bcard-body text-left" style="height: 300px;">
-                                                        <span class="btag btag-teal" style="margin-bottom: 20px;">Laravel 9 / Lumen / MySQL</span>
-                                                        <span><b>Name:</b><br><i>JefDev E-Commerce</i></span>
-                                                        <span><b>Description:</b><br>E-Commerce System</span>
-                                                        <span><b>PHP Framework:</b><br>Laravel 9 / Lumen</span>
-                                                        <span><b>Link URL:</b><br>Under Development</span>
-                                                        <!-- <button class="btn btn-primary" style="border-radius: 10px; margin-top: 20px;"> More Details</button> -->
-                                                    </div>
-                                                </div>
+                                            <div class="panel-body">
+                                              <h5><b>NEUST Local Student Council E-Voting</b></h5>
+                                              <small>LAN Based E-Voting System (Capstone Project)</small><br><br>
+                                              <div class="text-center">
+                                                  <span class="btag btag-teal">Core PHP / Bootstrap / MySQL / JQuery</span><br>
+                                              </div>
                                             </div>
-                                        </center>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 col-xs-12" style="justify-content: center" hidden>
-                                        <center>
-                                            <div class="bcontainer">
-                                                <div class="bcard">
-                                                    <div class="bcard-header">
-                                                        <img src="images/jefdev_projects.png" alt="rover" />
-                                                    </div>
-                                                    <div class="bcard-body text-left" style="height: 300px;">
-                                                        <span class="btag btag-teal" style="margin-bottom: 20px;">ReactJS / Python Django / MongoDB / JQuery</span>
-                                                        <span><b>Name:</b><br><i>JefDev Flexible E-Voting</i></span>
-                                                        <span><b>Description:</b><br>E-Voting System</span>
-                                                        <span><b>Frontend Framework:</b><br>ReactJS</span>
-                                                        <span><b>Backend Framework:</b><br>Python Django</span>
-                                                        <span><b>Link URL:</b><br>Under Development</span>
-                                                        <!-- <button class="btn btn-primary" style="border-radius: 10px; margin-top: 20px;"> More Details</button> -->
-                                                    </div>
-                                                </div>
+                                            <div class="panel-footer">
+                                                <a href="https://github.com/jedgarf/LSC_Voting_System"><button class="btn btn-danger btn-sm"><i class="fa fa-folder-open"></i> Repository</button></a>
+                                                <a href="javascript:void(0)"><button class="btn btn-primary btn-sm disabled"><i class="fa fa-tv"></i> Visit</button></a>
                                             </div>
-                                        </center>
+                                        </div>
                                     </div>
+
+                                    <div class="col-md-4 col-sm-6 col-xm-12 card-zoomx">
+                                        <div class="panel panel-default project_panel">
+                                            <div class="panel-heading content_img">
+                                              <img src="images/jefdev_projects.png" alt="" class="img-responsive center-block" style="height: 230px;" />
+                                              <!-- <div onclick="openModal();currentSlide(1)"><i class="fa fa-photo"></i> See Photos</div> -->
+                                            </div>
+                                            <div class="panel-body">
+                                              <h5><b>JefDev E-Commerce</b></h5>
+                                              <small>E-Commerce System</small><br><br>
+                                              <div class="text-center">
+                                                  <span class="btag btag-teal">Lumen / Bootstrap / MySQL / JQuery</span><br>
+                                              </div>
+                                            </div>
+                                            <div class="panel-footer">
+                                                <!-- <a href="javascript:void(0)"><button class="btn btn-danger btn-sm disabled"><i class="fa fa-folder-open"></i> Repository</button></a> -->
+                                                <a href="javascript:void(0)" title="On Progress"><button class="btn btn-primary btn-sm disabled"><i class="fa fa-tv"></i> Visit</button></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </section>
                             </div>
@@ -657,8 +696,97 @@
 
     <div id="project-galleries"></div>
 
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- Working Experience -->
+    <section id="work_experiences" data-stellar-background-ratio="0.5">
+        <div class="container reveal">
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="section-title">
+                        <h2>Professional Experiences</h2>
+                        <span class="line-bar">...</span>
+                    </div>
+                </div>
+
+                <div class="col-md-12 col-sm-12">
+
+                    <div class="container">
+                        <ul class="timeline">
+                            <li>
+                              <div class="timeline-badge primary"><i class="fa fa-briefcase"></i></div>
+                              <div class="timeline-panel animated slideInLeft">
+                                <div class="timeline-heading">
+                                  <h4 class="timeline-title">PHP Programmer JG5</h4>
+                                  <a href="https://wesupportinc.com/main/" target="_blank"><h5 class="timeline-title"><img src="images/wsi.jpg" width="18px" style="margin-top: -8px;"> WeSupport Incorporated</h5></a>
+                                  <p><small class="text-muted"><i class="fa fa-clock-o"></i> April 2022 - Present</small></p>
+                                </div>
+                                <div class="timeline-body" style="text-align: left; font-weight: normal;" hidden>
+                                  <ul>
+                                      <li>Worked as part of software development teams in the design, development, and support of both new and existing software products and systems; reporting status, monitoring issues/problems and recommending action plans.</li>
+                                      <li>Configured Google analytics module for tracking the visitors for the website.</li>
+                                      <li>Used Ajax for every page for dynamically displaying the data without a page refresh.</li>
+                                      <li>Developed and maintained functions, procedures, triggers, indexes using MySQL database programming language.</li>
+                                      <li>Identifying and solving issues caused by plugins or feeds under PHP, MySQL, HTML, CSS, Javascript and Jquery technology.</li>
+                                      <li>Administrate and maintain Linux Server in multiple projects.</li>
+                                      <li>Implementing Flutter for Mobile Application Development.</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="timeline-badge warning"><i class="fa fa-briefcase"></i></div>
+                              <div class="timeline-panel animated slideInLeft">
+                                <div class="timeline-heading">
+                                  <h4 class="timeline-title">PHP Programmer JG1</h4>
+                                  <a href="https://wesupportinc.com/main/" target="_blank"><h5 class="timeline-title"><img src="images/wsi.jpg" width="18px" style="margin-top: -8px;"> WeSupport Incorporated</h5></a>
+                                  <p><small class="text-muted"><i class="fa fa-clock-o"></i> Nov. 2019 - April 2022</small></p>
+                                </div>
+                                <div class="timeline-body" style="text-align: left; font-weight: normal;" hidden>
+                                  <ul>
+                                      <li>Worked as part of software development teams in the design, development, and support of both new and existing software products and systems; reporting status, monitoring issues/problems and recommending action plans.</li>
+                                      <li>Configured Google analytics module for tracking the visitors for the website.</li>
+                                      <li>Used Ajax for every page for dynamically displaying the data without a page refresh.</li>
+                                      <li>Developed and maintained functions, procedures, triggers, indexes using MySQL database programming language.</li>
+                                      <li>Identifying and solving issues caused by plugins or feeds under PHP, MySQL, HTML, CSS, Javascript and Jquery technology.</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </li>
+                            <li class="timeline-inverted">
+                              <div class="timeline-badge"><i class="fa fa-briefcase"></i></div>
+                              <div class="timeline-panel animated slideInRight">
+                                <div class="timeline-heading">
+                                  <h4 class="timeline-title">Junior PHP Developer</h4>
+                                  <a href="https://www2.serviciofilipino.com/" target="_blank"><h5 class="timeline-title"><img src="images/sfi_logo.png" width="18px" style="margin-top: -8px;"> Servicio Filipino Incorporated</h5></a>
+                                  <p><small class="text-muted"><i class="fa fa-clock-o"></i> Oct. 2018 - Nov. 2019</small></p>
+                                </div>
+                                <div class="timeline-body" style="text-align: left; font-weight: normal;" hidden>
+                                    <ul>
+                                        <li>Became part of the development team of COGO ERP Systems.<br>
+                                            <ul>
+                                                <li>Talent Management System</li>
+                                                <li>Billing System</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                              </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
     <!-- Educations -->
-    <section id="educations" data-stellar-background-ratio="0.5">
+    <section id="educations" data-stellar-background-ratio="0.5" hidden>
         <div class="container reveal">
             <div class="row">
 
@@ -671,13 +799,13 @@
 
                 <div class="col-md-12 col-sm-12">
                     <div class="row">
-                        <div class="col-md-3 col-sm-12" style="margin-bottom: 20px;">
+                        <div class="col-md-3 col-sm-12 neust-rotate" style="margin-bottom: 20px;">
                             <img src="images/neust.png" width="160px">
                         </div>
                         <div class="col-md-9 col-sm-12">
                             <div class="panel panel-primary text-left">
                                 <div class="panel-heading">
-                                    <b><big style="color: white;">Nueva Ecija University of Science and Technology</big><small class="pull-right">2014-2018</small><br>
+                                    <b><big>Nueva Ecija University of Science and Technology</big><small class="pull-right">2014-2018</small><br>
                                     <small>Bachelor of Science in Information Technology</small>
                                     </b>
                                 </div>
@@ -689,9 +817,33 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="col-md-12 col-sm-12">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-12 cctti-rotate" style="margin-bottom: 20px;">
+                            <img src="images/cctti_logo.png" width="180px">
+                        </div>
+                        <div class="col-md-9 col-sm-12">
+                            <div class="panel panel-primary text-left">
+                                <div class="panel-heading">
+                                    <b><big>City College of Technology and Trade Inc.</big><small class="pull-right">2017</small><br>
+                                    <small>National Certificate II</small>
+                                    </b>
+                                </div>
+                                <div class="panel-body">
+                                   ⚡ Computer Systems Servicing<br><br>
+                                   <a href="https://cctti.herokuapp.com/" target="_blank"><button class="btn btn-danger btn-sm pull-right">Visit Website</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
+
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
      <!-- Certificates and Seminars -->
     <section id="achievements_seminars" data-stellar-background-ratio="0.5">
@@ -708,28 +860,79 @@
                 <div class="col-md-12 col-sm-12">
                     <div class="row">
 
-                        <div class="col-md-4 col-sm-6 col-sm-6">
+                        <div class="col-md-4 col-sm-6 col-xm-12 card-zoomx">
+                            <div class="panel panel-default my_panel">
+                                <div class="panel-heading">
+                                  <img src="images/styava-dev.jpg" alt="" class="img-responsive center-block" style="height: 230px;" />
+                                </div>
+                                <div class="panel-body" style="height: 260px;">
+                                  <h5><b>Discovering the power of Static web Apps (2022)</b></h5>
+                                  <small>Organized by <a href="http://www.styava.com/" target="_blank" style="color: blue; text-decoration-line: underline !important;">STYAVA</a></small>
+                                  <div class="text-left">
+                                      <ul aria-label="Topics:">
+                                          <li>Azure Static Web Apps</li>
+                                          <li>Angular JS</li>
+                                      </ul>
+
+                                  <small></small>
+                                  </div>
+                                </div>
+                                <div class="panel-footer">
+                                    <a href="javascript:void(0)" onclick="viewCertificate('image', ['static_web_apps.JPG'])"><button class="btn btn-primary btn-sm">View Certificate</button></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xm-12 card-zoomx">
+                            <div class="panel panel-default my_panel">
+                                <div class="panel-heading">
+                                  <img src="images/styava-dev.jpg" alt="" class="img-responsive center-block" style="height: 230px;" />
+                                </div>
+                                <div class="panel-body" style="height: 260px;">
+                                  <h5><b>Roadmap for Azure Data Engineer (2022)</b></h5>
+                                  <small>Organized by <a href="http://www.styava.com/" target="_blank" style="color: blue; text-decoration-line: underline !important;">STYAVA</a></small>
+                                  <div class="text-left">
+                                      <ul aria-label="Topics:">
+                                          <li>Talk About Azure Data engineer Roles</li>
+                                          <li>Best practices for exam & interview</li>
+                                          <li>Roadmap for Data engineer</li>
+                                          <li>Key topics to cover prior to the interview</li>
+                                          <li>Basics always to remember</li>
+                                          <li>Practice common questions</li>
+                                          <li>Preparation resources</li>
+                                      </ul>
+
+                                  <small></small>
+                                  </div>
+                                </div>
+                                <div class="panel-footer">
+                                    <a href="javascript:void(0)" onclick="viewCertificate('image', ['azure_data_engineer.jpg'])"><button class="btn btn-primary btn-sm">View Certificate</button></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 col-xm-12 card-zoomx">
                             <div class="panel panel-default my_panel">
                                 <div class="panel-heading">
                                   <img src="images/dict.png" alt="" class="img-responsive center-block" style="height: 230px;" />
                                 </div>
                                 <div class="panel-body" style="height: 260px;">
-                                  <h5><b>Introduction of Figma (2022)</b></h5>
-                                  <small>DICT Online Webinar</small>
+                                  <h5><b>Introduction of Canva (2022)</b></h5>
+                                  <small>DICT Online Event</small>
                                 </div>
                                 <div class="panel-footer">
-                                    <a href="javascript:void();"><button class="btn btn-primary btn-sm disabled">View Certificate</button></a>
+                                    <a href="javascript:void(0)" onclick="viewCertificate('image', ['intro_of_canva.jpg'])"><button class="btn btn-primary btn-sm">View Certificate</button></a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-4 col-sm-6 col-sm-6">
+                        <div class="col-md-4 col-sm-6 col-xm-12 card-zoomx">
                             <div class="panel panel-default my_panel">
                                 <div class="panel-heading">
                                   <img src="images/laravel_ph.jpg" alt="" class="img-responsive center-block" style="height: 230px;" />
                                 </div>
                                 <div class="panel-body" style="height: 260px;">
-                                  <h5><b>Laravel PH Seminar 2019</b></h5>
+                                  <h5><b>Laravel PH Event 2019</b></h5>
                                   <!-- <small>Central Luzon Youth Congress on Information Technology</small><br> -->
                                   <small><i class="fa fa-map-marker"></i> Laravel Philippines - Quezon City, Metro Manila</small>
                                   <div class="text-left">
@@ -744,12 +947,12 @@
                                   </div>
                                 </div>
                                 <div class="panel-footer">
-                                    <a href="javascript:void();"><button class="btn btn-primary btn-sm disabled">View Certificate</button></a>
+                                    <a href="javascript:void(0)" onclick="viewCertificate('image', [])"><button class="btn btn-primary btn-sm">View Certificate</button></a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-4 col-sm-6 col-sm-6">
+                        <div class="col-md-4 col-sm-6 col-xm-12 card-zoomx">
                             <div class="panel panel-default my_panel">
                                 <div class="panel-heading">
                                   <img src="images/tesda.jpg" alt="" class="img-responsive center-block" style="height: 230px;" />
@@ -767,12 +970,12 @@
                                   </div>
                                 </div>
                                 <div class="panel-footer">
-                                    <a href="javascript:void();"><button class="btn btn-primary btn-sm disabled">View Certificate</button></a>
+                                    <a href="javascript:void(0)" onclick="viewCertificate('image', ['testda_nc2.jpg'])"><button class="btn btn-primary btn-sm">View Certificate</button></a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-4 col-sm-6 col-sm-6">
+                        <div class="col-md-4 col-sm-6 col-xm-12 card-zoomx">
                             <div class="panel panel-default my_panel">
                                 <div class="panel-heading">
                                   <img src="images/neust.png" alt="" class="img-responsive center-block" style="height: 230px;" />
@@ -787,12 +990,12 @@
                                   </div>
                                 </div>
                                 <div class="panel-footer">
-                                    <a href="javascript:void();"><button class="btn btn-primary btn-sm disabled">View Certificate</button></a>
+                                    <a href="javascript:void(0)" onclick="viewCertificate('image', ['ladder_of_success.jpg'])"><button class="btn btn-primary btn-sm">View Certificate</button></a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-4 col-sm-6 col-sm-6">
+                        <div class="col-md-4 col-sm-6 col-xm-12 card-zoomx">
                             <div class="panel panel-default my_panel">
                                 <div class="panel-heading">
                                   <img src="images/youth_congress.png" alt="" class="img-responsive center-block" style="height: 230px;" />
@@ -810,12 +1013,12 @@
                                   </div>
                                 </div>
                                 <div class="panel-footer">
-                                    <a href="javascript:void();"><button class="btn btn-primary btn-sm disabled">View Certificate</button></a>
+                                    <a href="javascript:void(0)" onclick="viewCertificate('image', ['youth_congress1.jpg', 'youth_congress2.jpg', 'youth_congress3.jpg', 'youth_congress4.jpg'])"><button class="btn btn-primary btn-sm">View Certificate</button></a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-4 col-sm-6 col-sm-6">
+                        <div class="col-md-4 col-sm-6 col-xm-12 card-zoomx">
                             <div class="panel panel-default my_panel">
                                 <div class="panel-heading">
                                   <img src="images/microsoft.png" alt="" class="img-responsive center-block" style="height: 230px;" />
@@ -830,12 +1033,12 @@
                                   </div>
                                 </div>
                                 <div class="panel-footer">
-                                    <a href="javascript:void();"><button class="btn btn-primary btn-sm disabled">View Certificate</button></a>
+                                    <a href="javascript:void(0)" onclick="viewCertificate('image', ['imagine_camp.jpg'])"><button class="btn btn-primary btn-sm">View Certificate</button></a>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-md-4 col-sm-6 col-sm-6">
+                        <div class="col-md-4 col-sm-6 col-xm-12 card-zoomx">
                             <div class="panel panel-default my_panel">
                                 <div class="panel-heading">
                                   <img src="images/dole_kabataan_ito.gif" alt="" class="img-responsive center-block" style="height: 230px;" />
@@ -849,7 +1052,7 @@
                                   </div>
                                 </div>
                                 <div class="panel-footer">
-                                    <a href="javascript:void();"><button class="btn btn-primary btn-sm disabled">View Certificate</button></a>
+                                    <a href="javascript:void(0)" onclick="viewCertificate('image', ['kabataan.jpg'])"><button class="btn btn-primary btn-sm">View Certificate</button></a>
                                 </div>
                             </div>
                         </div>
@@ -861,6 +1064,58 @@
         </div>
     </section>
 
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- Modal -->
+    <div id="certificateModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="certificateModalClose" class="close">&times;</span>
+          <h3><i class="fa fa-certificate"></i> Certificate</h3>
+        </div>
+        <div class="modal-body" id="certificateModalContent">
+        </div>
+        <!-- <div class="modal-footer">
+          <h3>Modal Footer</h3>
+        </div> -->
+      </div>
+
+    </div>
+
+    <div id="requestCVModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="requestCVModalClose" class="close">&times;</span>
+          <h3><i class="fa fa-file"></i> Request my CV</h3>
+        </div>
+        <div class="modal-body" id="requestCVModalContent">
+            <form method="POST" onsubmit="sendRequestCV(event, this)">
+                <div class="form-group">
+                    <label>Email <span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" name="remail" id="remail" required>
+                </div>
+                <div class="form-group">
+                    <label>Message <span class="text-danger">*</span></label>
+                    <textarea class="form-control" name="rmessage" id="rmessage" style="resize: none;" required></textarea>
+                </div>
+                <div class="form-group text-right">
+                    <button class="btn btn-primary btn-sm"><i class="fa fa-send" id="rcv-btn"></i> Submit</button>
+                </div>
+            </form>
+        </div>
+        <!-- <div class="modal-footer">
+          <h3>Modal Footer</h3>
+        </div> -->
+      </div>
+
+    </div>
+
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
     <!-- CONTACT -->
     <section id="contact" data-stellar-background-ratio="0.5">
         <div class="container reveal">
@@ -870,7 +1125,7 @@
                     <div class="section-title">
                         <h2>Get In Touch</h2>
                         <br>
-                        <p style="color: blanchedalmond; text-align: center;">If you have any questions, please feel free to drop me a line. I’ll try my best to get back to you!</p>
+                        <p style="color: blanchedalmond; text-align: center;">Whether you want to get in touch, talk about a project collaboration, or just say hi, I'd love to hear from you. Simply fill the form and send me a message.</p>
                         <span class="line-bar">...</span>
                     </div>
                 </div>
@@ -896,6 +1151,10 @@
                         </div>
 
                         <div class="col-md-4 col-sm-12">
+                        </div>
+                        <div class="col-md-4 col-sm-12">
+                        </div>
+                        <div class="col-md-4 col-sm-12">
                             <button type="submit" class="form-control contact-btn" name="submit" style="background: #ce3232; border-radius: 100px; color: #ffffff; font-weight: 500;"><i class="fa fa-send" id="contact-btn"></i> Send Message</button>
                         </div>
 
@@ -911,20 +1170,26 @@
                             <b>Company Email:</b> <a href="mailto:jfrancisco@wesupportinc.com" style="color: #ffffff;">jfrancisco@wesupportinc.com</a></p>
                         </div>
                         <div class="col-md-12 col-sm-12">
+                            <button class="btn btn-danger" onclick="requestMyCV()">Request my CV</button>
+                        </div>
+                        <div class="col-md-12 col-sm-12">
                             <hr>
                         </div>
                         <div class="col-md-12 col-sm-12 text-center">
                             <div class="row">
-                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                <div class="col-md-3 col-sm-3 col-xs-3 zoom">
                                     <a href="https://www.linkedin.com/in/jedgarf" target="_blank" style="color: #0072b1;" title="https://www.linkedin.com/in/jedgarf"><i class="fa fa-linkedin-square fa-5x"></i></a>
                                 </div>
-                                <div class="col-md-3 col-sm-3 col-xs-3">
-                                    <a href="viber://chat?number=639652281882" style="color: #0072b1;" title="Viber"><i class="fa fa-mobile fa-5x"></i></a>
+                                <!-- <div class="col-md-3 col-sm-3 col-xs-3 zoom">
+                                    <a href="viber://chat?number=639652281882" style="color: #0072b1;" title="Viber"><i class="fa-brands fa-viber fa-5x"></i></a>
+                                </div> -->
+                                <div class="col-md-3 col-sm-3 col-xs-3 zoom">
+                                    <a href="viber://chat?number=639652281882" style="color: #0072b1;" title="Viber"><img src="./images/viber_blue.svg" style="width: 68px; margin-top: 5px;"></a>
                                 </div>
-                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                <div class="col-md-3 col-sm-3 col-xs-3 zoom">
                                     <a href="https://facebook.com/jedgarf" target="_blank" style="color: #3267B2;" title="https://facebook.com/jedgarf"><i class="fa fa-facebook-square fa-5x"></i></a>
                                 </div>
-                                <div class="col-md-3 col-sm-3 col-xs-3">
+                                <div class="col-md-3 col-sm-3 col-xs-3 zoom">
                                     <a href="https://github.com/jedgarf" target="_blank" style="color: #df4759;" title="https://github.com/jedgarf"><i class="fa fa-github-square fa-5x"></i></a>
                                 </div>
                             </div>
@@ -936,6 +1201,8 @@
             </div>
         </div>
     </section>
+
+    <!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
 
 
     <!-- FOOTER -->
@@ -965,6 +1232,8 @@
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
 
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib --> <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+
     <!-- toastr -->
     <script src="js/toastr/toastr.js"></script>
 
@@ -979,28 +1248,37 @@
         // --------------------------------------------------------------------------------
 
         // Load Pages
-        $('.svg1').load('svg/svg1.html');
+        $('.svg1').load('svg/dark_svg1.html');
+        // $('.svg1').load('svg/light_svg1.html');
         $('.svg2').load('svg/svg2.html');
         $('#project-galleries').load('project_galleries.html');
 
         // --------------------------------------------------------------------------------
 
         // Home Animation
-        var homeAnimateContent = "";
-        for (var homeAnimateLength = 0; homeAnimateLength < 200; homeAnimateLength++) {
-            homeAnimateContent += '<div class="tri"></div>';
-        }
+        // var homeAnimateContent = "";
+        // for (var homeAnimateLength = 0; homeAnimateLength < 200; homeAnimateLength++) {
+        //     homeAnimateContent += '<div class="tri"></div>';
+        // }
 
-        $(".wrap").html(homeAnimateContent);
+        // $(".wrap").html(homeAnimateContent);
+
+        // --------------------------------------------------------------------------------
+
+        // disable save images
+
+        $("body").on("contextmenu", "img", function(e) {
+          return false;
+        });
 
         // --------------------------------------------------------------------------------
 
         // Typing Animation
         var typed = new Typed('.typed-element', {
             strings: [
-                ' John Edgar Jr. Francisco',
-                ' a PHP Full Stack Developer',
-                ' a Mobile App Developer'
+                ' JOHN EDGAR FRANCISCO',
+                ' a BACKEND DEVELOPER',
+                ' a FRONTEND DEVELOPER'
             ],
             typeSpeed: 10,
             backSpeed: 8,
@@ -1058,6 +1336,49 @@
 
         // --------------------------------------------------------------------------------
 
+        function requestMyCV() {
+            var modal = document.getElementById("requestCVModal");
+            modal.style.display = "block";
+        }
+
+        document.getElementById("requestCVModalClose").onclick = function() {
+          document.getElementById("requestCVModal").style.display = "none";
+        }
+
+        function sendRequestCV(evt, form) {
+            
+            evt.preventDefault();
+
+            var modal = document.getElementById("requestCVModal");
+            var remail = document.getElementById("remail").value;
+            var rmessage = document.getElementById("rmessage").value;
+            // alert("NOT AVAILABLE RIGHT NOW.");
+
+            var templateParams = {
+                email: remail,
+                message: rmessage
+            };
+
+            $("#rcv-btn").removeClass('fa-send');
+            $("#rcv-btn").addClass('fa-spinner fa-spin');
+             
+            emailjs.send('service_wx34j79', 'template_ekndomq', templateParams)
+            .then(function(response) {
+               $("#rcv-btn").removeClass('fa-spinner fa-spin');
+               $("#rcv-btn").addClass('fa-send');
+               $("#remail").val("");
+               $("#rmessage").val("");
+               modal.style.display = "none";
+               toastr.success('Your request was successfully sent.', '');
+            }, function(error) {
+               $("#rcv-btn").removeClass('fa-spinner fa-spin');
+               $("#rcv-btn").addClass('fa-send');
+               toastr.error('Unable to send request right now.', '');
+            });
+        }
+
+        // --------------------------------------------------------------------------------
+
         // goto top
         mybutton = document.getElementById("back-to-top-wrapper");
 
@@ -1101,6 +1422,63 @@
         window.addEventListener("scroll", reveal);
 
         // --------------------------------------------------------------------------------
+
+        // Modal
+
+        document.getElementById("certificateModalClose").onclick = function() {
+          document.getElementById("certificateModal").style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == document.getElementById("certificateModal")) {
+            document.getElementById("certificateModal").style.display = "none";
+          }
+
+          if (event.target == document.getElementById("requestCVModal")) {
+            document.getElementById("requestCVModal").style.display = "none";
+          }
+        }
+
+        function viewCertificate(fileType, fileName = []) {
+            
+            // certificateModal
+            // modal-title
+            // modal-footer
+            // modal-body
+
+            var modal = document.getElementById("certificateModal");
+
+            if (fileName.length > 0) {
+
+                var certificateModalContent = "<center><div class='row'>";
+
+                for (var i = 0; i < fileName.length; i++) {
+                    
+                    if (fileName.length > 1) {
+
+                        certificateModalContent += "<div class='col-md-6'>";
+                        certificateModalContent += "<img draggable='false' src='./images/certificates/" + fileName[i] + "' class='img-fluid img-responsive mb-5' width='500px' style='max-height: 600px'>";
+                        certificateModalContent += "</div>";
+
+                    } else {
+                        certificateModalContent += "<img draggable='false' src='./images/certificates/" + fileName[i] + "' class='img-fluid img-responsive' width='500px' style='max-height: 600px'>";
+                    }
+
+                }
+
+                certificateModalContent += "</div></center>";
+
+                $("#certificateModalContent").html(certificateModalContent);
+            } else {
+                $("#certificateModalContent").html("<center>Not available right now.</center>");
+            }
+
+            modal.style.display = "block";
+
+        }
+
+        // particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":6,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
     </script>
 
 </body>
