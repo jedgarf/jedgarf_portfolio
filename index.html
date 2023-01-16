@@ -40,6 +40,9 @@
 
     <link rel="stylesheet" type="text/css" href="css/custom_style2.css" />
 
+    <link type="text/css" rel="stylesheet" href="js/lightGallery/dist/css/lightGallery.css" />                
+    <link type="text/css" rel="stylesheet" href="js/lightslider/dist/css/lightslider.css" /> 
+
     <style type="text/css">
         
     /* The Modal (background) */
@@ -473,11 +476,25 @@
                                                 <div class="row">
                                                    <div class="col-md-5 col-sm-12 col-xm-12">
 
-                                                        
+                                                        <!-- ----------------carousel--------------------- -->
 
-                                                       <div class="content_img">
+                                                            <ul class="imageGallery">
+                                                              <li data-thumb="images/acms_survey/acms_survey.png" data-src="images/acms_survey/acms_survey.png">
+                                                                <img src="images/acms_survey/acms_survey.png" style="width: inherit; height: 230px;"/>
+                                                              </li>
+                                                              <li data-thumb="images/acms_survey/acms_survey_login.JPG" data-src="images/acms_survey/acms_survey_login.JPG">
+                                                                <img src="images/acms_survey/acms_survey_login.JPG" style="width: inherit; height: 230px;"/>
+                                                              </li>
+                                                              <li data-thumb="images/acms_survey/acms_survey_voter_list.JPG" data-src="images/acms_survey/acms_survey_voter_list.JPG">
+                                                                <img src="images/acms_survey/acms_survey_voter_list.JPG" style="width: inherit; height: 230px;"/>
+                                                              </li>
+                                                            </ul>
+
+                                                        <!-- --------------------------------------------- -->
+
+                                                       <!-- <div class="content_img">
                                                             <img src="images/acms_survey.png" alt="" class="img-responsive center-block" style="height: 230px;" />
-                                                        </div>
+                                                        </div> -->
                                                    </div>
                                                    <div class="col-md-7 col-sm-12 col-xm-12 text-left project-text">
                                                         <h4><b>Automated Campaign Management System (ACMS) - Survey</b></h4>
@@ -515,10 +532,33 @@
                                                 <span class="panel-upper-right-title"><i class="fa fa-building"></i> WeSupport Incorporated</span>
                                                 <div class="row">
                                                     <div class="col-md-5 col-sm-12 col-xm-12">
-                                                        <div class="content_img">
+
+                                                        <!-- ----------------carousel--------------------- -->
+
+                                                            <ul class="imageGallery">
+                                                              <li data-thumb="images/oilhome/theme_oilhome.jpg" data-src="images/oilhome/theme_oilhome.jpg">
+                                                                <img src="images/oilhome/theme_oilhome.jpg" style="width: inherit; height: 230px;"/>
+                                                              </li>
+                                                              <li data-thumb="images/oilhome/oilhome_landing.JPG" data-src="images/oilhome/oilhome_landing.JPG">
+                                                                <img src="images/oilhome/oilhome_landing.JPG" style="width: inherit; height: 230px;"/>
+                                                              </li>
+                                                              <li data-thumb="images/oilhome/oilhome_login.JPG" data-src="images/oilhome/oilhome_login.JPG">
+                                                                <img src="images/oilhome/oilhome_login.JPG" style="width: inherit; height: 230px;"/>
+                                                              </li>
+                                                              <li data-thumb="images/oilhome/oilhome_admission.JPG" data-src="images/oilhome/oilhome_admission.JPG">
+                                                                <img src="images/oilhome/oilhome_admission.JPG" style="width: inherit; height: 230px;"/>
+                                                              </li>
+                                                              <li data-thumb="images/oilhome/oilhome_class.JPG" data-src="images/oilhome/oilhome_class.JPG">
+                                                                <img src="images/oilhome/oilhome_class.JPG" style="width: inherit; height: 230px;"/>
+                                                              </li>
+                                                            </ul>
+
+                                                        <!-- --------------------------------------------- -->
+
+                                                        <!-- <div class="content_img">
                                                             <img src="images/theme_oilhome.jpg" alt="" class="img-responsive center-block" style="height: 230px;" />
-                                                            <!-- <div onclick="openModal();currentSlide(1)"><i class="fa fa-photo"></i> See Photos</div> -->
-                                                        </div>
+                                                            <div onclick="openModal();currentSlide(1)"><i class="fa fa-photo"></i> See Photos</div>
+                                                        </div> -->
                                                     </div>
                                                     <div class="col-md-7 col-sm-12 col-xm-12 text-left project-text">
                                                         <h4><b>Obelisk Interlinked Learners' H.O.M.E.</b></h4>
@@ -1578,7 +1618,10 @@
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
 
-    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib --> <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+    <!-- stats.js lib --> 
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
 
     <!-- toastr -->
     <script src="js/toastr/toastr.js"></script>
@@ -1588,6 +1631,9 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <script src="js/jack_in_the_box.js"></script>
+
+    <script src="js/lightGallery/dist/lightgallery.min.js"></script>
+    <script src="js/lightslider/dist/js/lightslider.js"></script>
 
     <script>
 
@@ -1609,7 +1655,57 @@
 
         // $(".wrap").html(homeAnimateContent);
 
-        $('.carousel').carousel();
+        $(document).ready(function() {
+            $('.imageGallery').lightSlider({
+                item:1,
+                autoWidth: false,
+                slideMove: 1, // slidemove will be 1 if loop is true
+                slideMargin:0,
+
+                addClass: '',
+                mode: "slide",
+                useCSS: false,
+                cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
+                easing: 'linear', //'for jquery animation',////
+
+                speed: 1000, //ms'
+                auto: false,
+                pauseOnHover: false,
+                loop:true,
+                slideEndAnimation: true,
+                pause: 2000,
+
+                keyPress: false,
+                controls: true,
+                prevHtml: '<span class="fa fa-arrow-circle-left" style="font-size: 35px !important;"></span>',
+                nextHtml: '<span class="fa fa-arrow-circle-right" style="font-size: 35px !important;"></span>',
+
+                rtl:false,
+                adaptiveHeight:false,
+
+                vertical:false,
+                verticalHeight:500,
+                vThumbWidth:100,
+
+                thumbItem:5,
+                pager: true,
+                gallery:true,
+                galleryMargin: 5,
+                thumbMargin: 5,
+                currentPagerPosition:'left',
+
+                enableTouch:true,
+                enableDrag: false,
+                freeMove:true,
+                swipeThreshold: 40,
+
+                // onSliderLoad: function(el) {
+                //     el.lightGallery({
+                //         selector: '#imageGallery .lslide'
+                //     });
+                // }   
+            });  
+        });
 
         // --------------------------------------------------------------------------------
 
